@@ -1,8 +1,16 @@
 import React from 'react'
+import Layout from '../components/Layout'
 
 const Root = () => {
   return (
-    <div>Root</div>
+    <Layout>
+      <header>
+        Header
+      </header>
+      <main>
+        Main
+      </main>
+    </Layout >
   )
 }
 

@@ -1,0 +1,17 @@
+/* ======= MEDIA QURIES ======== */
+/* for small devices */
+/* for medium devices */
+/* for large devices */
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono&display=swap");
+/* ===== Colors   ===== */
+/* ===== Font and Typography  ===== */
+/* ===== Container width  ===== */
+/* ===== Section  ===== */
+/* =====  Font Weight  ===== */
+/* =====  Margins  ===== */
+/* =====  Z index  ===== */
+/* ===== Transition  ===== */
+.container {
+  width: 90%;
+  margin: auto;
+}

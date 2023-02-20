@@ -1,0 +1,45 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono&display=swap");
+/* ===== Colors   ===== */
+/* ===== Font and Typography  ===== */
+/* ===== Container width  ===== */
+/* ===== Section  ===== */
+/* =====  Font Weight  ===== */
+/* =====  Margins  ===== */
+/* =====  Z index  ===== */
+/* ===== Transition  ===== */
+.nav__top {
+  border-bottom: 1px solid rgba(145, 127, 127, 0.425);
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  padding: 0 1rem;
+}
+.nav__top ul,
+.nav__top li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav__top ul {
+  gap: 2rem;
+}
+.nav__top li {
+  gap: 0.5rem;
+}
+.nav__bottom {
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: auto;
+  flex-direction: auto;
+}
+.nav__bottom_container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: auto;
+  flex-direction: auto;
+}

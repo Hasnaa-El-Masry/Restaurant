@@ -1,0 +1,7 @@
+@import '../../../styles/mediaqueries';
+@import '../../../styles/variables';
+
+.container {
+    width: $container-width-sm;
+    margin: auto;
+}
