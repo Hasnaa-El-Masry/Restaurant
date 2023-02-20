@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+
+/* ===== Colors   ===== */
+
+$nav-scroll-bg: hsl(0, 0%, 13%);
+$body-bg: hsl(210, 4%, 9%);
+$body-bg-light: hsl(210, 4%, 11%);
+$container-bg: hsl(30, 8%, 5%);
+
+$primary-color: hsl(38, 61%, 73%);
+$text-color: #fff;
+$muted-text-color: #888889;
+$text-color-dark: #000;
+
+$scroll-bar-color: hsl(38, 83%, 72%);
+$scroll-thumb-color:  hsl(20, 83%, 72%);
+
+/* ===== Font and Typography  ===== */
+
+$body-font: 'Space Mono', monospace;
+$biggest-font-size: 2rem;
+$h2-font-size: 1.25rem;
+$h3-font-size: 1.125rem;
+
+$normal-font-size: .938rem;
+$small-font-size: .813rem;
+$smaller-font-size: .75rem;
+
+/* ===== Container width  ===== */
+
+$container-width-lg: 75%;
+$container-width-md: 86%;
+$container-width-sm: 90%;
+
+/* ===== Section  ===== */
+$section-padding: 4.5rem 0 1rem;
+
+/* =====  Font Weight  ===== */
+
+$font-semi-bold: 600;
+$font-bold: 700;
+
+/* =====  Margins  ===== */
+
+$mb-0-5: .5rem;
+$mb-0-75: .75rem;
+$mb-1: 1rem;
+$mb-1-5: 1.5rem;
+$mb-2: 2rem;
+
+/* =====  Z index  ===== */
+
+$z-tooltip: 10;
+$z-fixed: 100;
+
+/* ===== Transition  ===== */
+$transition-slow: all .7s ease-in-out;
+$transition-fast: all .4s ease-in-out;
+
+$box-shadow-light: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+$toggle-icon-size: 1.5rem;
+
+$nav-height: 4rem;
+$nav-padding: 1rem 3rem;
+$nav-border: 1px solid rgba($color: $primary-color, $alpha: .3);
