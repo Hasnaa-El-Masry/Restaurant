@@ -11,3 +11,45 @@
 .pointer {
     cursor: pointer;
 }
+
+// .button {
+//     background-color: $primary-color;
+//     color: $text-color-dark;
+//     width: fit-content;
+//     border: 2px solid $primary-color;
+//     padding: 1.2rem 1.8rem;
+//     letter-spacing: .2rem;
+//     text-transform: capitalize;
+//     font-size: $smaller-font-size;
+//     font-weight: $font-semi-bold;
+//     cursor: pointer;
+//     transition: $transition-fast;
+//     position: relative;
+
+//     &::before {
+//         content: '';
+//         width: 100px; 
+//         height: 100%;
+//         background-color: $container-bg;
+//         position: absolute;
+//         top: -100px; 
+//         right: 0;
+//         left: 0;
+//         width: 100%;
+//     }
+
+//     &:hover{
+//         background-color: $container-bg;
+//         color: $text-color;
+//         border-color: $primary-color;
+//     }
+
+//     &:hover .button::before{ 
+//         top: 0;
+//     }
+
+// }
+
+.primary-color {
+    color: $primary-color;
+}

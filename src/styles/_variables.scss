@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Forum&family=Gloock&family=Lora&family=Raleway&family=Space+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap');
 
 /* ===== Colors   ===== */
 
@@ -13,12 +14,13 @@ $muted-text-color: #888889;
 $text-color-dark: #000;
 
 $scroll-bar-color: hsl(38, 83%, 72%);
-$scroll-thumb-color:  hsl(20, 83%, 72%);
+$scroll-thumb-color: hsl(20, 83%, 72%);
 
 /* ===== Font and Typography  ===== */
 
-$body-font: 'Space Mono', monospace;
-$biggest-font-size: 2rem;
+$body-font: 'Roboto';
+$header-font: 'Forum', cursive;
+$biggest-font-size: 3.3rem;
 $h2-font-size: 1.25rem;
 $h3-font-size: 1.125rem;
 
@@ -38,6 +40,7 @@ $section-padding: 4.5rem 0 1rem;
 /* =====  Font Weight  ===== */
 
 $font-semi-bold: 600;
+$font-light: 300;
 $font-bold: 700;
 
 /* =====  Margins  ===== */
@@ -62,6 +65,7 @@ $box-shadow-light: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 $toggle-icon-size: 1.5rem;
 
 $nav-top-height: 2.5rem;
-$nav-bottom-height: 4rem;
+$nav-bottom-height: 200px;
+$nav-bottom-height: 6rem;
 $nav-padding: 1rem 3rem;
 $nav-border: 1px solid rgba($color: $primary-color, $alpha: .3);

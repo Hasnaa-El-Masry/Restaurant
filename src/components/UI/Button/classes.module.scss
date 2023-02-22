@@ -1,0 +1,67 @@
+@import '../../../styles/variables';
+
+.button {
+    background-color: $primary-color;
+    color: $text-color-dark;
+    border: 2px solid $primary-color;
+
+    min-width: 10rem;
+
+    padding: 1.5rem 1.8rem;
+    letter-spacing: .2rem;
+    text-transform: capitalize;
+
+    font-size: $smaller-font-size;
+    font-weight: $font-semi-bold;
+
+    cursor: pointer;
+
+    transition: $transition-slow;
+    position: relative;
+    overflow: hidden;
+
+    .layer {
+        width: 100%;
+        height: 100%;
+        background-color: $container-bg;
+        position: absolute;
+        top: -100px;
+        right: 0;
+        left: 0;
+        border-bottom-left-radius: 5rem;
+        border-bottom-right-radius: 5rem;
+        transition: $transition-slow;
+    }
+
+    .text_two,
+    .text_one {
+        position: absolute;
+        right: 0;
+        left: 0;
+        transition: $transition-fast;
+    }
+
+    .text_one {
+        color: $text-color-dark;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .text_two {
+        color: $text-color;
+        transform: translateY(300%);
+    }
+
+    &:hover .layer {
+        top: 0px;
+    }
+
+    &:hover .text_two {
+        transform: translateY(-50%);
+    }
+
+    &:hover .text_one {
+        transform: translateY(200%);
+    }
+
+}

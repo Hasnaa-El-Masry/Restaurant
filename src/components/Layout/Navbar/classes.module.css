@@ -1,4 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Space+Mono&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Forum&family=Gloock&family=Lora&family=Raleway&family=Space+Mono&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap");
 /* ===== Colors   ===== */
 /* ===== Font and Typography  ===== */
 /* ===== Container width  ===== */
@@ -7,20 +8,51 @@
 /* =====  Margins  ===== */
 /* =====  Z index  ===== */
 /* ===== Transition  ===== */
+/* ======= MEDIA QURIES ======== */
+/* for small devices */
+/* for medium devices */
+/* for large devices */
+.nav {
+  background: transparent;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  height: 0;
+  left: 0;
+  transition: all 0.4s ease-in-out;
+}
 .nav__top {
   border-bottom: 1px solid rgba(145, 127, 127, 0.425);
   height: 2.5rem;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  font-size: 0.8rem;
+  justify-content: center;
+  gap: auto;
+  flex-direction: auto;
+  font-size: 0.813rem;
   padding: 0 1rem;
+}
+.nav__top a {
+  font-size: 0.813rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  flex-direction: auto;
+}
+.nav__top a .call {
+  font-size: 0.938rem;
+}
+.nav__top .address {
+  display: none;
 }
 .nav__top ul,
 .nav__top li {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: auto;
+  flex-direction: auto;
 }
 .nav__top ul {
   gap: 2rem;
@@ -29,7 +61,7 @@
   gap: 0.5rem;
 }
 .nav__bottom {
-  height: 4rem;
+  height: 6rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -42,4 +74,36 @@
   justify-content: space-between;
   gap: auto;
   flex-direction: auto;
+  flex-direction: row-reverse;
 }
+.nav .icon {
+  font-size: 1.1rem;
+}
+.nav .action {
+  display: none;
+}
+
+.hide_nav_top {
+  transform: translateY(-2.5rem);
+}
+
+.scroll_bg {
+  background-color: hsl(0deg, 0%, 13%);
+}
+
+@media screen and (min-width: 967px) {
+  .nav__top {
+    justify-content: space-between;
+  }
+  .nav__top .address {
+    display: initial;
+  }
+}
+@media screen and (min-width: 576px) {
+  .nav__bottom_container {
+    flex-direction: initial;
+  }
+  .nav__bottom .action {
+    display: initial;
+  }
+}/*# sourceMappingURL=classes.module.css.map */

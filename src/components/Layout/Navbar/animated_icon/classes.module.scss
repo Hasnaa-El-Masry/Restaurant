@@ -1,0 +1,34 @@
+.toggle {
+    font-size: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: .3rem;
+    width: 32px;
+
+    & > div {
+        background-color: #fff;
+        height: 2px;
+        animation:animate .7s ease-in-out infinite alternate forwards;
+    }
+
+    & > div:nth-child(1) {
+        animation-delay: .2s;
+
+    }
+
+    & > div:nth-child(2) {
+        animation-delay: .4s;
+    }
+    & > div:nth-child(3) {
+        animation-delay: .6s;
+    }
+}
+
+@keyframes animate {
+    0% {
+        width: 15px;
+    }
+    100% {
+        width: 100%;
+    }
+}

@@ -1,7 +1,3 @@
-/* ======= MEDIA QURIES ======== */
-/* for small devices */
-/* for medium devices */
-/* for large devices */
 @import url("https://fonts.googleapis.com/css2?family=Forum&family=Gloock&family=Lora&family=Raleway&family=Space+Mono&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap");
 /* ===== Colors   ===== */
@@ -12,7 +8,10 @@
 /* =====  Margins  ===== */
 /* =====  Z index  ===== */
 /* ===== Transition  ===== */
-.container {
-  width: 90%;
-  margin: auto;
+.header {
+  background-image: url("../../../assets/images/slider-1.jpg");
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  padding-top: calc(6rem + 2.5rem);
 }/*# sourceMappingURL=classes.module.css.map */

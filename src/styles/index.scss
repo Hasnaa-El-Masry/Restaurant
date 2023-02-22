@@ -30,7 +30,9 @@ h2,
 h3,
 h4,
 h5 {
-    font-weight: $font-semi-bold;
+    font-family: $header-font !important;
+    font-weight: $font-light;
+
 }
 
 h1 {
@@ -64,15 +66,6 @@ a {
     }
 }
 
-button {
-    border: none;
-    background-color: transparent;
-}
-
-.text-center {
-    text-align: center;
-}
-
 @include tablet {
     $biggest-font-size: 3rem;
     $h2-font-size: 1.75rem;
@@ -94,8 +87,7 @@ button {
         font-size: $h3-font-size;
     }
 
-    p,
-    a {
+    p{
         font-size: $normal-font-size;
     }
 }
@@ -107,13 +99,8 @@ img {
 }
 
 // Swiper style modefiying
-
 .swiper-pagination-bullet-active {
     background-color: $primary-color;
 }
 
-
-#tsparticles {
-    height: calc(85vh - $nav-height );
-    z-index: -1;
-}
+    

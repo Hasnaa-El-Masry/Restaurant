@@ -2,38 +2,61 @@ import classes from './classes.module.scss';
 import { BiPhone } from 'react-icons/bi';
 import { MdOutlineEmail, MdOutlineLocationOn } from 'react-icons/md';
 import { AiOutlineClockCircle } from 'react-icons/ai';
-import { GiHamburgerMenu } from 'react-icons/gi';
-import { Link } from 'react-router-dom';
+import { TbSquareRotated } from 'react-icons/tb';
+import { Link, useNavigate } from 'react-router-dom';
 import Container from '../../UI/Container';
+import logo from '../../../assets/images/logo.png';
+import BurgerIcon from './animated_icon';
+import { useEffect } from 'react';
+import { useState } from 'react';
+import Button from '../../UI/Button';
+
 
 const Navbar = () => {
+
+    const navigate = useNavigate()
+    const [isScrolled, setIsScrolled] = useState(false);
+    const changeScrollHandler = () => {
+        if (window.scrollY > 0) {
+            setIsScrolled(true);
+        } else {
+            setIsScrolled(false);
+        }
+    }
+
+    useEffect(() => {
+        window.addEventListener('scroll', changeScrollHandler)
+    }, [])
+
     return (
-        <nav className={classes.nav}>
-            <div className={classes.nav__top}>
-                <div>
+        <nav className={`${classes.nav} ${isScrolled ? classes.hide_nav_top : ''}`}>
+            <div className={`${classes.nav__top}`}>
+                <div className={classes.address}>
                     <ul>
-                        <li><MdOutlineLocationOn /> <span> Restaurant St, Delicious City, London 9578, UK </span> </li>
-                        <li><AiOutlineClockCircle /> <span>Daily : 8.00 am to 10.00 pm</span> </li>
+                        <li><MdOutlineLocationOn className={classes.icon} /> <span> Restaurant St, Delicious City, London 9578, UK </span> </li>
+                        <li className='primary-color'><TbSquareRotated /></li>
+                        <li><AiOutlineClockCircle className={classes.icon} /> <span>Daily : 8.00 am to 10.00 pm</span> </li>
                     </ul>
                 </div>
                 <div>
                     <ul>
-                        <li><BiPhone /> <span>+1 123 456 7890</span></li>
-                        <li> <MdOutlineEmail /><span> booking@restaurant.com </span></li>
+                        <li><Link to=''><BiPhone className={classes.icon} /><span className={classes.call}>+1 123 456 7890</span></Link></li>
+                        <li className='primary-color'><TbSquareRotated /></li>
+                        <li> <Link to=''><MdOutlineEmail className={classes.icon} /><span>booking@restaurant.com</span> </Link></li>
                     </ul>
                 </div>
             </div>
-            <div className={classes.nav__bottom}>
+            <div className={`${classes.nav__bottom} ${isScrolled ? classes.scroll_bg : ''}`}>
                 <Container>
                     <div className={classes.nav__bottom_container}>
                         <div className={classes.toggle_icon}>
-                            <GiHamburgerMenu />
+                            <BurgerIcon />
                         </div>
                         <div className={classes.logo}>
-                            <Link>logo</Link>
+                            <Link><img src={logo} /></Link>
                         </div>
                         <div className={classes.action}>
-                            <button>find a table</button>
+                            <Button onClick={()=>navigate('')}>find a table</Button>
                         </div>
                     </div>
                 </Container>

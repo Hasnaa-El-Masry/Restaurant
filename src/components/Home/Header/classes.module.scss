@@ -1,0 +1,10 @@
+@import '../../../styles/variables';
+
+.header {
+    background-image: url('../../../assets/images/slider-1.jpg');
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    padding-top: calc(#{$nav-bottom-height} + #{$nav-top-height});
+
+}

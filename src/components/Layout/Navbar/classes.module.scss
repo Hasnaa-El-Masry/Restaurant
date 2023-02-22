@@ -1,22 +1,42 @@
 @import '../../../styles/variables';
 @import '../../../styles/mixins';
+@import '../../../styles/mediaqueries';
 
 .nav {
+
+    background: transparent;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    height: 0;
+    left: 0;
+    transition: $transition-fast;
+
     &__top {
+
         border-bottom: 1px solid rgba(145, 127, 127, 0.425);
         height: $nav-top-height;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        font-size: .8rem;
+        @include flex(center, center);
+
+        font-size: $small-font-size;
         padding: 0 1rem;
+
+        a {
+            font-size: $small-font-size;
+            @include flex(center, center, .5rem);
+
+            .call {
+                font-size: $normal-font-size;
+            }
+        }
+
+        .address {
+            display: none;
+        }
 
         ul,
         li {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-
+            @include flex(space-between, center);
         }
 
         ul {
@@ -34,6 +54,49 @@
 
         &_container {
             @include flex(space-between, center);
+            flex-direction: row-reverse;
+        }
+    }
+
+    .icon {
+        font-size: 1.1rem;
+    }
+
+    .action {
+        display: none;
+    }
+
+}
+
+.hide_nav_top {
+    transform: translateY(-$nav-top-height);
+}
+
+.scroll_bg {
+    background-color: $nav-scroll-bg;
+}
+
+@include tablet {
+
+    .nav__top {
+        justify-content: space-between;
+
+        .address {
+            display: initial;
+        }
+    }
+
+}
+
+@include smallDevice {
+
+    .nav__bottom {
+
+        &_container {
+            flex-direction: initial;
+        }
+        .action {
+            display: initial;
         }
     }
 
