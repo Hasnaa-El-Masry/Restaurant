@@ -8,6 +8,9 @@
 /* =====  Margins  ===== */
 /* =====  Z index  ===== */
 /* ===== Transition  ===== */
+.container {
+  text-align: center;
+}
 .container .subtitle {
   color: hsl(38deg, 61%, 73%);
   margin-bottom: 1.5rem;

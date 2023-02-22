@@ -19,9 +19,9 @@ const SectionHeader = ({ header, subtitle, title, description }) => {
                 }
             </div>
 
-            <div className={classes.description}>
+            {description && <div className={classes.description}>
                 <p>{description}</p>
-            </div>
+            </div>}
         </div>
     )
 }
