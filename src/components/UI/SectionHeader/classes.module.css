@@ -8,27 +8,23 @@
 /* =====  Margins  ===== */
 /* =====  Z index  ===== */
 /* ===== Transition  ===== */
-.header .slider__item {
-  position: relative;
-  min-height: 140vh;
+.container .subtitle {
+  color: hsl(38deg, 61%, 73%);
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.3rem;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  font-size: 0.7rem;
+  font-weight: bold;
 }
-.header .slider__item .item_img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
+.container .pattern_img img {
+  width: 100px;
+  margin: auto;
+  margin-bottom: 2rem;
 }
-.header .slider__item .item_img img {
-  width: 100%;
-  height: 100%;
+.container .desc {
+  margin: 1rem 0 3rem;
 }
-.header .slider__item .item_content {
-  position: absolute;
-  width: 100%;
-  top: 30%;
-  text-align: center;
-}
-.header .slider__item .item_content .action {
-  margin: 2rem 0 1rem;
+.container .desc p {
+  font-size: 1.2rem;
 }

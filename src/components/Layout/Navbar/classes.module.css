@@ -20,6 +20,7 @@
   height: 0;
   left: 0;
   transition: all 0.4s ease-in-out;
+  z-index: 100;
 }
 .nav__top {
   border-bottom: 1px solid rgba(145, 127, 127, 0.425);
@@ -106,4 +107,4 @@
   .nav__bottom .action {
     display: initial;
   }
-}/*# sourceMappingURL=classes.module.css.map */
+}

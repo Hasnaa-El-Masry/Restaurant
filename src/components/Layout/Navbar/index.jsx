@@ -56,8 +56,8 @@ const Navbar = () => {
                             <Link><img src={logo} /></Link>
                         </div>
                         <div className={classes.action}>
-                            <Button onClick={()=>navigate('')}>find a table</Button>
-                        </div>
+                            <Button variant='primary' onClick={()=>navigate('')}>find a table</Button>
+                        </div> 
                     </div>
                 </Container>
             </div>

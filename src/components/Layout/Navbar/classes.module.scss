@@ -11,6 +11,7 @@
     height: 0;
     left: 0;
     transition: $transition-fast;
+    z-index: $z-fixed;
 
     &__top {
 

@@ -36,6 +36,27 @@ section h2 {
   margin-bottom: 3rem;
 }
 
+.header .subtitle {
+  color: hsl(38deg, 61%, 73%);
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.3rem;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  font-size: 0.7rem;
+  font-weight: bold;
+}
+.header .pattern_img img {
+  width: 100px;
+  margin: auto;
+  margin-bottom: 2rem;
+}
+.header .desc {
+  margin: 1rem 0 3rem;
+}
+.header .desc p {
+  font-size: 1.2rem;
+}
+
 /* ======= Layout ======== */
 .container {
   max-width: 75%;
@@ -108,7 +129,6 @@ body {
   background-color: hsl(210deg, 4%, 9%);
   font-family: "Roboto";
   color: #fff;
-  line-height: 1.7;
 }
 
 h1,
@@ -121,7 +141,7 @@ h5 {
 }
 
 h1 {
-  font-size: 3.3rem;
+  font-size: 12rem;
 }
 
 h2 {
@@ -150,7 +170,7 @@ a:hover {
 
 @media screen and (min-width: 967px) {
   h1 {
-    font-size: 3rem;
+    font-size: 5rem;
   }
   h2 {
     font-size: 1.75rem;
@@ -158,8 +178,7 @@ a:hover {
   h3 {
     font-size: 1.25rem;
   }
-  p,
-  a {
+  p {
     font-size: 1rem;
   }
 }
@@ -172,4 +191,4 @@ img {
 
 .swiper-pagination-bullet-active {
   background-color: hsl(38deg, 61%, 73%);
-}/*# sourceMappingURL=index.css.map */
+}

@@ -22,7 +22,6 @@ body {
     background-color: $body-bg;
     font-family: $body-font;
     color: $text-color;
-    line-height: 1.7;
 }
 
 h1,
@@ -67,7 +66,7 @@ a {
 }
 
 @include tablet {
-    $biggest-font-size: 3rem;
+    $biggest-font-size: 5rem;
     $h2-font-size: 1.75rem;
     $h3-font-size: 1.25rem;
 

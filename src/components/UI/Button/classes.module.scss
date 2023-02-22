@@ -1,13 +1,10 @@
 @import '../../../styles/variables';
 
 .button {
-    background-color: $primary-color;
-    color: $text-color-dark;
+    background-color: transparent;
     border: 2px solid $primary-color;
 
-    min-width: 10rem;
-
-    padding: 1.5rem 1.8rem;
+    padding: 1.5rem 5rem;
     letter-spacing: .2rem;
     text-transform: capitalize;
 
@@ -23,7 +20,7 @@
     .layer {
         width: 100%;
         height: 100%;
-        background-color: $container-bg;
+        background-color: $primary-color;
         position: absolute;
         top: -100px;
         right: 0;
@@ -42,13 +39,13 @@
     }
 
     .text_one {
-        color: $text-color-dark;
+        color: $primary-color;
         top: 50%;
         transform: translateY(-50%);
     }
 
     .text_two {
-        color: $text-color;
+        color: $text-color-dark;
         transform: translateY(300%);
     }
 
@@ -62,6 +59,29 @@
 
     &:hover .text_one {
         transform: translateY(200%);
+    }
+
+}
+
+.primary {
+    background-color: $primary-color;
+
+    .layer {
+        background-color: $container-bg;
+        top: 100px;
+        right: 0;
+        left: 0;
+        border-radius: 0;
+        border-top-left-radius: 5rem;
+        border-top-right-radius: 5rem;
+    }
+
+    .text_one {
+        color: $text-color-dark;
+    }
+
+    .text_two {
+        color: $text-color;
     }
 
 }

@@ -9,36 +9,71 @@
 /* =====  Z index  ===== */
 /* ===== Transition  ===== */
 .button {
-  background-color: hsl(38deg, 61%, 73%);
-  color: #000;
-  width: -moz-fit-content;
-  width: fit-content;
+  background-color: transparent;
   border: 2px solid hsl(38deg, 61%, 73%);
-  padding: 1.2rem 1.8rem;
+  padding: 1.5rem 5rem;
   letter-spacing: 0.2rem;
   text-transform: capitalize;
   font-size: 0.75rem;
   font-weight: 600;
   cursor: pointer;
-  transition: all 0.4s ease-in-out;
+  transition: all 0.7s ease-in-out;
   position: relative;
   overflow: hidden;
 }
-.button__layer {
+.button .layer {
   width: 100%;
   height: 100%;
-  background-color: hsl(30deg, 8%, 5%);
+  background-color: hsl(38deg, 61%, 73%);
   position: absolute;
   top: -100px;
   right: 0;
   left: 0;
-  border-bottom-left-radius: 2rem;
-  border-bottom-right-radius: 2rem;
+  border-bottom-left-radius: 5rem;
+  border-bottom-right-radius: 5rem;
+  transition: all 0.7s ease-in-out;
+}
+.button .text_two,
+.button .text_one {
+  position: absolute;
+  right: 0;
+  left: 0;
   transition: all 0.4s ease-in-out;
 }
-.button:hover .button__layer {
+.button .text_one {
+  color: hsl(38deg, 61%, 73%);
+  top: 50%;
+  transform: translateY(-50%);
+}
+.button .text_two {
+  color: #000;
+  transform: translateY(300%);
+}
+.button:hover .layer {
   top: 0px;
 }
-.button:hover {
+.button:hover .text_two {
+  transform: translateY(-50%);
+}
+.button:hover .text_one {
+  transform: translateY(200%);
+}
+
+.primary {
+  background-color: hsl(38deg, 61%, 73%);
+}
+.primary .layer {
+  background-color: hsl(30deg, 8%, 5%);
+  top: 100px;
+  right: 0;
+  left: 0;
+  border-radius: 0;
+  border-top-left-radius: 5rem;
+  border-top-right-radius: 5rem;
+}
+.primary .text_one {
+  color: #000;
+}
+.primary .text_two {
   color: #fff;
-}/*# sourceMappingURL=classes.module.css.map */
+}
