@@ -30,31 +30,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Forum&family=Gloock&family=Lora&family=Raleway&family=Space+Mono&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap");
 section {
-  padding: 4.5rem 0 1rem;
-}
-section h2 {
-  margin-bottom: 3rem;
-}
-
-.header .subtitle {
-  color: hsl(38deg, 61%, 73%);
-  margin-bottom: 1.5rem;
-  letter-spacing: 0.3rem;
-  text-transform: uppercase;
-  font-size: 0.75rem;
-  font-size: 0.7rem;
-  font-weight: bold;
-}
-.header .pattern_img img {
-  width: 100px;
-  margin: auto;
-  margin-bottom: 2rem;
-}
-.header .desc {
-  margin: 1rem 0 3rem;
-}
-.header .desc p {
-  font-size: 1.2rem;
+  padding: 8rem 1rem;
 }
 
 /* ======= Layout ======== */
@@ -101,6 +77,37 @@ section h2 {
 
 .pointer {
   cursor: pointer;
+}
+
+.link {
+  position: relative;
+}
+.link a {
+  color: hsl(38deg, 61%, 73%);
+  transition: all 0.7s ease-in-out;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+}
+.link::after, .link::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  width: 0%;
+  height: 1px;
+  transform: translateX(-50%);
+  margin: 5px 0;
+  background-color: hsl(38deg, 61%, 73%);
+  transition: all 0.7s ease-in-out;
+}
+.link::before {
+  margin: 8px 0;
+}
+.link:hover a {
+  color: #fff;
+}
+.link:hover::after, .link:hover::before {
+  width: 100%;
 }
 
 .primary-color {
@@ -163,9 +170,14 @@ p {
 
 a {
   color: #fff;
+  display: block;
 }
 a:hover {
   color: hsl(38deg, 61%, 73%);
+}
+
+.main > section:nth-child(odd) {
+  background-color: hsl(30deg, 8%, 5%);
 }
 
 @media screen and (min-width: 967px) {
@@ -173,10 +185,10 @@ a:hover {
     font-size: 5rem;
   }
   h2 {
-    font-size: 1.75rem;
+    font-size: 2.75rem;
   }
   h3 {
-    font-size: 1.25rem;
+    font-size: 2rem;
   }
   p {
     font-size: 1rem;

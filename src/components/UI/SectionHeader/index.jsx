@@ -1,9 +1,9 @@
 import classes from './classes.module.scss'
 import pattern_img from "../../../assets/images/line.svg";
 
-const SectionHeader = ({ header, subtitle, title, description }) => {
+const SectionHeader = ({ header, subtitle, title, description, className }) => {
     return (
-        <div className={classes.container}>
+        <div className={`${classes.container} ${className ? className : ''}`}>
             <div className={classes.subtitle}>
                 {subtitle}
             </div>

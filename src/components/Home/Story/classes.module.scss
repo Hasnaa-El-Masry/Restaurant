@@ -1,1 +1,90 @@
 @import '../../../styles/variables';
+
+.story {
+    position: relative;
+
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        padding-bottom: 5rem;
+
+        .content {
+            text-align: center;
+
+            .title {
+                p {
+                    width: 70%;
+                }
+            }
+
+            .call {
+                a {
+                    margin-top: 1rem;
+                    color: $primary-color;
+                    font-size: 1.4rem;
+                }
+            }
+
+            .action {
+                margin: 2rem;
+            }
+        }
+
+        .image {
+            .layer_img {
+                width: 270px;
+                position: relative;
+
+                &::before,
+                img {
+                    transform: translateY(-50%) translateX(-50%);
+                    position: absolute;
+                }
+
+                img {
+                    z-index: 2;
+                }
+
+                &::before {
+                    content: '';
+                    width: 140px;
+                    min-height: 300px;
+                    transform: translateY(-50%) translateX(-50%) scaleX(1);
+                    background-image: url('../../../assets/images/shape.png');
+                    transition: $transition-slow;
+                    z-index: 1;
+                }
+
+            }
+        }
+
+        .round_stamp {
+            position: absolute;
+            right: 2%;
+            top: 5%;
+
+            &::before {
+                background: url('../../../assets/images/stamp-layer.png') no-repeat;
+                bottom: 0;
+                content: "";
+                left: 0;
+                position: absolute;
+                right: 0;
+                top: 0;
+                transform-origin:center;
+                animation:rotate 15s linear infinite normal ;
+            }
+        }
+    }
+
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

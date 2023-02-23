@@ -1,4 +1,6 @@
 import React from 'react'
+import classes from './classes.module.scss'
+
 import ContactUs from './ContactUs'
 import Header from './Header'
 import Intro from './Intro'
@@ -12,15 +14,16 @@ import Team from './Team'
 import Testimonials from './Testimonials'
 import WhyUs from './WhyUs'
 
+
 const Home = () => {
   return (
     <>
       <header>
         <Header />
       </header>
-      <main>
-        <section><Offers/></section>
-        <section><Story/></section>
+      <main className='main'>
+        <Offers/>
+        <Story/>
         <section><SpecialDish/></section>
         <section><Menu/></section>
         <section><SpecialOffer/></section>

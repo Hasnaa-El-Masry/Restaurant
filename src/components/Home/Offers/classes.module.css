@@ -8,3 +8,118 @@
 /* =====  Margins  ===== */
 /* =====  Z index  ===== */
 /* ===== Transition  ===== */
+.offers {
+  position: relative;
+  min-height: 150vh;
+  overflow: hidden;
+}
+.offers::before, .offers::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 20%;
+  height: 50%;
+  transition: all 0.7s ease-in-out;
+  background-image: url("../../../assets/images/bg-2.png");
+  animation: moveUpDownTop 5s ease-in-out infinite alternate-reverse;
+}
+.offers::after {
+  background-image: url("../../../assets/images/bg-1.png");
+  top: initial;
+  bottom: 0;
+  left: 0;
+  animation: moveUpDownBottom 5s ease-in-out infinite alternate-reverse;
+}
+.offers .container {
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  transform: translate(-50%);
+}
+.offers .header {
+  grid-column: 1/6;
+}
+.offers .items {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 8rem;
+}
+.offers .offer__item {
+  text-align: center;
+  display: grid;
+  gap: 1.5rem;
+}
+.offers .offer__item_img {
+  position: relative;
+  min-height: 400px;
+  overflow: hidden;
+}
+.offers .offer__item_img img {
+  position: absolute;
+  z-index: 2;
+  left: 50%;
+  right: 50%;
+  top: 50%;
+  height: 90%;
+  transform: translateX(-50%) translateY(-50%);
+}
+.offers .offer__item_img::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  right: 50%;
+  width: 140px;
+  min-height: 400px;
+  transform: translate(-50%) scaleX(1);
+  background-image: url("../../../assets/images/shape.png");
+  transition: all 0.7s ease-in-out;
+  z-index: 1;
+}
+.offers .offer__item_img::after {
+  content: "";
+  position: absolute;
+  left: -100%;
+  right: 50%;
+  width: 140px;
+  min-height: 400px;
+  background: linear-gradient(90deg, hsla(0deg, 0%, 100%, 0) 0, hsla(0deg, 0%, 100%, 0.4));
+  transform: skewX(-25deg);
+  transition: all 0.7s ease-in-out;
+  z-index: 3;
+}
+.offers .offer__item_img:hover::before {
+  transform: translate(-50%) scaleX(-1);
+}
+.offers .offer__item_img:hover:after {
+  animation: move 1.5s ease-in-out;
+}
+.offers .offer__item:nth-child(1),
+.offers .offer__item:nth-child(3) {
+  transform: translateY(-40%);
+}
+
+@keyframes move {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 300%;
+  }
+}
+@keyframes moveUpDownTop {
+  0% {
+    top: -5%;
+  }
+  100% {
+    top: 0%;
+  }
+}
+@keyframes moveUpDownBottom {
+  0% {
+    bottom: -5%;
+  }
+  100% {
+    bottom: 0%;
+  }
+}

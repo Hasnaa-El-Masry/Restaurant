@@ -1,8 +1,8 @@
 import classes from './classes.module.scss';
 
-const Container = ({children}) => {
+const Container = ({ children, className }) => {
   return (
-    <div className={classes.container}>{children}</div>
+    <div className={`${classes.container} ${className ? className : ''}`}>{children}</div>
   )
 }
 

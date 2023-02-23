@@ -8,3 +8,72 @@
 /* =====  Margins  ===== */
 /* =====  Z index  ===== */
 /* ===== Transition  ===== */
+.story {
+  position: relative;
+}
+.story .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  padding-bottom: 5rem;
+}
+.story .container .content {
+  text-align: center;
+}
+.story .container .content .title p {
+  width: 70%;
+}
+.story .container .content .call a {
+  margin-top: 1rem;
+  color: hsl(38deg, 61%, 73%);
+  font-size: 1.4rem;
+}
+.story .container .content .action {
+  margin: 2rem;
+}
+.story .container .image .layer_img {
+  width: 270px;
+  position: relative;
+}
+.story .container .image .layer_img::before,
+.story .container .image .layer_img img {
+  transform: translateY(-50%) translateX(-50%);
+  position: absolute;
+}
+.story .container .image .layer_img img {
+  z-index: 2;
+}
+.story .container .image .layer_img::before {
+  content: "";
+  width: 140px;
+  min-height: 300px;
+  transform: translateY(-50%) translateX(-50%) scaleX(1);
+  background-image: url("../../../assets/images/shape.png");
+  transition: all 0.7s ease-in-out;
+  z-index: 1;
+}
+.story .container .round_stamp {
+  position: absolute;
+  right: 2%;
+  top: 5%;
+}
+.story .container .round_stamp::before {
+  background: url("../../../assets/images/stamp-layer.png") no-repeat;
+  bottom: 0;
+  content: "";
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform-origin: center;
+  animation: rotate 15s linear infinite normal;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

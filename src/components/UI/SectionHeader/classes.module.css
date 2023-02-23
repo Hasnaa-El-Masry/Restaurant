@@ -10,6 +10,7 @@
 /* ===== Transition  ===== */
 .container {
   text-align: center;
+  margin-bottom: 3rem;
 }
 .container .subtitle {
   color: hsl(38deg, 61%, 73%);
@@ -20,14 +21,18 @@
   font-size: 0.7rem;
   font-weight: bold;
 }
+.container .title h1, .container .title h2 {
+  margin-bottom: 2rem;
+}
 .container .pattern_img img {
   width: 100px;
   margin: auto;
   margin-bottom: 2rem;
 }
-.container .desc {
-  margin: 1rem 0 3rem;
-}
-.container .desc p {
+.container .description p {
   font-size: 1.2rem;
+  width: 35%;
+  margin: auto;
+  line-height: 1.9;
+  font-size: 0.938rem;
 }

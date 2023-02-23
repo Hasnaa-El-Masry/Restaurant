@@ -12,6 +12,46 @@
     cursor: pointer;
 }
 
+.link {
+    position: relative;
+
+    a {
+        color: $primary-color;
+        transition: $transition-slow;
+        text-transform: uppercase;
+        font-size: $smaller-font-size;
+    }
+
+    &::after,
+    &::before {
+        content: '';
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        width: 0%;
+        height: 1px;
+        transform: translateX(-50%);
+        margin: 5px 0;
+        background-color: $primary-color;
+        transition: $transition-slow;
+    }
+
+    &::before {
+        margin: 8px 0;
+    }
+
+    &:hover {
+        a {
+            color: $text-color;
+        }
+
+        &::after,
+        &::before {
+            width: 100%;
+        }
+    }
+}
+
 // .button {
 //     background-color: $primary-color;
 //     color: $text-color-dark;
