@@ -1,1 +1,74 @@
 @import '../../../styles/variables';
+
+.special_dish {
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    .img {
+        img {
+            height: 100%;
+        }
+    }
+
+    .content {
+        padding: $section-padding;
+
+        &__container {
+            padding: 2rem;
+            display: grid;
+            gap: 3rem;
+            grid-template-columns: 5% 1fr;
+        }
+
+        .icon {
+            font-size: 2.5rem;
+            transform: translateY(5%);
+            animation: moveUpDown 2s ease-in-out infinite alternate-reverse;
+        }
+
+        .header {
+            text-align: left;
+
+            img,
+            p {
+                margin-inline-start: 0;
+            }
+
+            p {
+                width: 80%;
+            }
+        }
+
+        .price {
+            margin: 3rem 0;
+
+            .old {
+                color: $muted-text-color;
+                font-size: 1rem;
+                margin-inline-end: 2rem;
+            }
+
+            .new {
+                color: $primary-color;
+                font-size: 1.6rem;
+                margin-inline-end: 2rem;
+            }
+
+            .actions {
+                text-transform: capitalize;
+            }
+        }
+    }
+}
+
+@keyframes moveUpDown {
+    0% {
+        transform: translateY(0%);
+    }
+
+    100% {
+        transform: translateY(5%);
+
+    }
+}

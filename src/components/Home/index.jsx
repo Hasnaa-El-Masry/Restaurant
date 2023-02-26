@@ -24,7 +24,7 @@ const Home = () => {
       <main className='main'>
         <Offers/>
         <Story/>
-        <section><SpecialDish/></section>
+        <SpecialDish/>
         <section><Menu/></section>
         <section><SpecialOffer/></section>
         <section><Testimonials/></section>

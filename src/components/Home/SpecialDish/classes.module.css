@@ -8,3 +8,41 @@
 /* =====  Margins  ===== */
 /* =====  Z index  ===== */
 /* ===== Transition  ===== */
+.special_dish {
+  padding: 0;
+  display: grid;
+  gap: 5rem;
+  grid-template-columns: 1fr 1fr;
+}
+.special_dish .content {
+  padding: 8rem 1rem;
+}
+.special_dish .content .header {
+  text-align: left;
+}
+.special_dish .content .header img,
+.special_dish .content .header p {
+  -webkit-margin-start: 0;
+          margin-inline-start: 0;
+}
+.special_dish .content .header p {
+  width: 80%;
+}
+.special_dish .content .price {
+  margin: 3rem 0;
+}
+.special_dish .content .price .old {
+  color: #888889;
+  font-size: 1rem;
+  -webkit-margin-end: 2rem;
+          margin-inline-end: 2rem;
+}
+.special_dish .content .price .new {
+  color: hsl(38deg, 61%, 73%);
+  font-size: 1.8rem;
+  -webkit-margin-end: 2rem;
+          margin-inline-end: 2rem;
+}
+.special_dish .content .price .actions {
+  text-transform: capitalize;
+}
