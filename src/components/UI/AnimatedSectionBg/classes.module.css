@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=Forum&family=Gloock&family=Lora&family=Raleway&family=Space+Mono&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap");
+@keyframes move {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 300%;
+  }
+}
+@keyframes animatedWidth {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+/* ===== Colors   ===== */
+/* ===== Font and Typography  ===== */
+/* ===== Container width  ===== */
+/* ===== Section  ===== */
+/* =====  Font Weight  ===== */
+/* =====  Margins  ===== */
+/* =====  Z index  ===== */
+/* ===== Transition  ===== */
+.animated_bg {
+  position: relative;
+  overflow: hidden;
+}
+.animated_bg::before, .animated_bg::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transition: all 0.7s ease-in-out;
+  background-repeat: no-repeat;
+  animation: moveUpDownTop 5s ease-in-out infinite alternate-reverse;
+}
+.animated_bg::after {
+  right: -80%;
+  background-image: url("../../../assets/images/bg-2.png");
+  animation: moveUpDownTop 5s ease-in-out infinite alternate-reverse;
+}
+.animated_bg::before {
+  right: 0;
+  background-image: url("../../../assets/images/bg-1.png");
+  animation: moveUpDownBottom 5s ease-in-out infinite alternate-reverse;
+}
+
+@keyframes moveUpDownTop {
+  0% {
+    top: 5%;
+  }
+  100% {
+    top: 0%;
+  }
+}
+@keyframes moveUpDownBottom {
+  0% {
+    top: 70%;
+  }
+  100% {
+    top: 65%;
+  }
+}
+.topLeft::after {
+  left: 0%;
+  top: 0%;
+  background-image: url("../../../assets/images/leftBg.png") !important;
+  animation: moveUpDownTop 5s ease-in-out infinite alternate-reverse;
+}
+.topLeft::before {
+  right: -60%;
+  background-image: url("../../../assets/images/rightBg.png") !important;
+  animation: moveUpDownBottom 5s ease-in-out infinite alternate-reverse;
+}

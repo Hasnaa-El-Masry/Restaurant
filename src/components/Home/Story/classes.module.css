@@ -25,7 +25,7 @@
 }
 .story .container .content .call a {
   margin-top: 1rem;
-  color: hsl(38deg, 61%, 73%);
+  color: hsl(38, 61%, 73%);
   font-size: 1.4rem;
 }
 .story .container .content .action {

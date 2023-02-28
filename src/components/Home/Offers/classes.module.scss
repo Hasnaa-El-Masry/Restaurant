@@ -1,32 +1,8 @@
 @import '../../../styles/variables';
+@import '../../../styles/animation';
 
 .offers {
-
-    position: relative;
-    min-height: 150vh;
-    overflow: hidden;
-
-    &::before,
-    &::after {
-        content: '';
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: 20%;
-        height: 50%;
-        transition: $transition-slow;
-        background-image: url('../../../assets/images/bg-2.png');
-        animation: moveUpDownTop 5s ease-in-out infinite alternate-reverse;
-    }
-
-    &::after {
-        background-image: url('../../../assets/images/bg-1.png');
-        top: initial;
-        bottom: 0;
-        left: 0;
-        animation: moveUpDownBottom 5s ease-in-out infinite alternate-reverse;
-
-    }
+    min-height: 120vh;
 
     .container {
         position: absolute;
@@ -51,7 +27,6 @@
         gap: 1.5rem;
 
         &_img {
-
             position: relative;
             min-height: 400px;
             overflow: hidden;
@@ -113,33 +88,3 @@
     }
 }
 
-@keyframes move {
-    0% {
-        left: -100%;
-    }
-
-    100% {
-        left: 300%;
-    }
-
-}
-
-@keyframes moveUpDownTop {
-    0% {
-        top: -5%;
-    }
-
-    100% {
-        top:0%
-    }
-}
-
-@keyframes moveUpDownBottom {
-    0% {
-        bottom: -5%;
-    }
-
-    100% {
-        bottom:0%
-    }
-}

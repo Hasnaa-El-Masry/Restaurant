@@ -8,3 +8,22 @@
 /* =====  Margins  ===== */
 /* =====  Z index  ===== */
 /* ===== Transition  ===== */
+.special_offer {
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative;
+}
+.special_offer::before, .special_offer::after {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 100%;
+  top: 0;
+  background-image: url("../../../assets/images/sidePattern.png");
+}
+.special_offer::before {
+  left: 0;
+}
+.special_offer::after {
+  right: 0;
+}

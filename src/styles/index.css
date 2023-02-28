@@ -67,28 +67,41 @@ section {
 /* =====  Margins  ===== */
 /* =====  Z index  ===== */
 /* ===== Transition  ===== */
+@keyframes move {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 300%;
+  }
+}
+@keyframes animatedWidth {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
 .text-center {
   text-align: center;
 }
 
 .icon {
-  color: hsl(38deg, 61%, 73%);
+  color: hsl(38, 61%, 73%);
 }
 
 .pointer {
   cursor: pointer;
 }
 
-.link {
+.link,
+.active {
   position: relative;
 }
-.link a {
-  color: hsl(38deg, 61%, 73%);
-  transition: all 0.7s ease-in-out;
-  text-transform: uppercase;
-  font-size: 0.75rem;
-}
-.link::after, .link::before {
+.link::after, .link::before,
+.active::after,
+.active::before {
   content: "";
   position: absolute;
   top: 100%;
@@ -97,21 +110,42 @@ section {
   height: 1px;
   transform: translateX(-50%);
   margin: 5px 0;
-  background-color: hsl(38deg, 61%, 73%);
+  background-color: hsl(38, 61%, 73%);
   transition: all 0.7s ease-in-out;
 }
-.link::before {
+.link::before,
+.active::before {
   margin: 8px 0;
 }
-.link:hover a {
-  color: #fff;
-}
+
 .link:hover::after, .link:hover::before {
-  width: 100%;
+  animation: animatedWidth 0.7s ease-in-out forwards;
+}
+
+.active::after, .active::before {
+  animation: animatedWidth 0.7s ease-in-out forwards;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.justify-center {
+  justify-content: center;
 }
 
 .primary-color {
-  color: hsl(38deg, 61%, 73%);
+  color: hsl(38, 61%, 73%);
+}
+
+.title {
+  font-family: "Forum", cursive;
+}
+
+.divider {
+  height: 90%;
+  width: 1px;
+  background-color: rgba(170, 170, 170, 0.4392156863);
 }
 
 * {
@@ -133,7 +167,7 @@ html {
 }
 
 body {
-  background-color: hsl(210deg, 4%, 9%);
+  background-color: hsl(210, 4%, 9%);
   font-family: "Roboto";
   color: #fff;
 }
@@ -148,20 +182,28 @@ h5 {
 }
 
 h1 {
-  font-size: 12rem;
+  font-size: 5rem;
 }
 
 h2 {
-  font-size: 1.25rem;
+  font-size: 3rem;
 }
 
 h3 {
-  font-size: 1.125rem;
+  font-size: 2.1rem;
+}
+
+h4 {
+  font-size: 1.5rem;
+}
+
+h5 {
+  font-size: 1.3rem;
 }
 
 small {
   font-size: 0.6rem;
-  color: #888889;
+  color: #595653;
 }
 
 p {
@@ -173,27 +215,13 @@ a {
   display: block;
 }
 a:hover {
-  color: hsl(38deg, 61%, 73%);
+  color: hsl(38, 61%, 73%);
 }
 
 .main > section:nth-child(odd) {
-  background-color: hsl(30deg, 8%, 5%);
+  background-color: hsl(30, 8%, 5%);
 }
 
-@media screen and (min-width: 967px) {
-  h1 {
-    font-size: 5rem;
-  }
-  h2 {
-    font-size: 2.75rem;
-  }
-  h3 {
-    font-size: 2rem;
-  }
-  p {
-    font-size: 1rem;
-  }
-}
 img {
   display: block;
   width: 100%;
@@ -202,5 +230,5 @@ img {
 }
 
 .swiper-pagination-bullet-active {
-  background-color: hsl(38deg, 61%, 73%);
+  background-color: hsl(38, 61%, 73%);
 }

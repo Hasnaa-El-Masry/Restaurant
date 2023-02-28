@@ -5,11 +5,15 @@ import img1 from '../../../assets/images/offer-image-1.jpg';
 import img2 from '../../../assets/images/offer-image-2.jpg';
 import img3 from '../../../assets/images/offer-image-3.jpg';
 import { Link } from 'react-router-dom';
+import AnimatedSectionBg from '../../UI/AnimatedSectionBg';
 
 const Offers = () => {
 
   return (
-    <section className={classes.offers}>
+
+    <AnimatedSectionBg>
+      <div className={classes.offers}>
+
         <Container className={classes.container}>
           <div className={classes.header}>
 
@@ -29,7 +33,7 @@ const Offers = () => {
               <div className={classes.offer__item_title}>
                 <h3>Breakfast</h3>
               </div>
-              <div>
+              <div className='d-flex justify-center'>
                 <Link className='link' to='' >view menu</Link>
               </div>
             </div>
@@ -42,7 +46,7 @@ const Offers = () => {
               <div className={classes.offer__item_title}>
                 <h3>Appetizers</h3>
               </div>
-              <div >
+              <div className='d-flex justify-center'>
                 <Link className='link' to=''>view menu</Link>
               </div>
             </div>
@@ -55,14 +59,16 @@ const Offers = () => {
               <div className={classes.offer__item_title}>
                 <h3>Drinks</h3>
               </div>
-              <div>
+              <div className='d-flex justify-center'>
                 <Link className='link' to=''>view menu</Link>
               </div>
             </div>
 
           </div>
         </Container>
-    </section>
+
+      </div>
+    </AnimatedSectionBg>
 
   )
 }

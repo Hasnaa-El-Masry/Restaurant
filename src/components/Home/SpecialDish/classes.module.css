@@ -11,11 +11,24 @@
 .special_dish {
   padding: 0;
   display: grid;
-  gap: 5rem;
   grid-template-columns: 1fr 1fr;
+}
+.special_dish .img img {
+  height: 100%;
 }
 .special_dish .content {
   padding: 8rem 1rem;
+}
+.special_dish .content__container {
+  padding: 2rem;
+  display: grid;
+  gap: 3rem;
+  grid-template-columns: 5% 1fr;
+}
+.special_dish .content .icon {
+  font-size: 2.5rem;
+  transform: translateY(5%);
+  animation: moveUpDown 2s ease-in-out infinite alternate-reverse;
 }
 .special_dish .content .header {
   text-align: left;
@@ -32,17 +45,26 @@
   margin: 3rem 0;
 }
 .special_dish .content .price .old {
-  color: #888889;
+  color: #595653;
   font-size: 1rem;
   -webkit-margin-end: 2rem;
           margin-inline-end: 2rem;
 }
 .special_dish .content .price .new {
-  color: hsl(38deg, 61%, 73%);
-  font-size: 1.8rem;
+  color: hsl(38, 61%, 73%);
+  font-size: 1.6rem;
   -webkit-margin-end: 2rem;
           margin-inline-end: 2rem;
 }
 .special_dish .content .price .actions {
   text-transform: capitalize;
+}
+
+@keyframes moveUpDown {
+  0% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(5%);
+  }
 }

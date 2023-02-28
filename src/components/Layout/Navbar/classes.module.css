@@ -89,7 +89,7 @@
 }
 
 .scroll_bg {
-  background-color: hsl(0deg, 0%, 13%);
+  background-color: hsl(0, 0%, 13%);
 }
 
 @media screen and (min-width: 967px) {

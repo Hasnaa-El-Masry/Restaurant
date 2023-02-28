@@ -10,8 +10,10 @@ $container-bg: hsl(30, 8%, 5%);
 
 $primary-color: hsl(38, 61%, 73%);
 $text-color: #fff;
+$text-color-light: #a7a7a7;
 $muted-text-color: #595653;
 $text-color-dark: #000;
+$divide-color: #aaaaaa70;
 
 $scroll-bar-color: hsl(38, 83%, 72%);
 $scroll-thumb-color: hsl(20, 83%, 72%);
@@ -20,9 +22,12 @@ $scroll-thumb-color: hsl(20, 83%, 72%);
 
 $body-font: 'Roboto';
 $header-font: 'Forum', cursive;
-$biggest-font-size: 12rem;
-$h2-font-size: 1.25rem;
-$h3-font-size: 1.125rem;
+
+$h1-font-size: 5rem;
+$h2-font-size: 3rem;
+$h3-font-size: 2.1rem;
+$h4-font-size: 1.5rem;
+$h5-font-size: 1.3rem;
 
 $normal-font-size: .938rem;
 $small-font-size: .813rem;

@@ -1,0 +1,68 @@
+@import '../../../styles/animation';
+@import '../../../styles/variables';
+
+.animated_bg {
+
+    position: relative;
+    overflow: hidden;
+
+    &::before,
+    &::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        transition: $transition-slow;
+        background-repeat: no-repeat;
+        animation: moveUpDownTop 5s ease-in-out infinite alternate-reverse;
+    }
+
+    &::after {
+        right: -80%;
+        background-image: url('../../../assets/images/bg-2.png');
+        animation: moveUpDownTop 5s ease-in-out infinite alternate-reverse;
+    }
+
+    &::before {
+        right: 0;
+        background-image: url('../../../assets/images/bg-1.png');
+        animation: moveUpDownBottom 5s ease-in-out infinite alternate-reverse;
+    }
+}
+
+@keyframes moveUpDownTop {
+    0% {
+        top: 5%;
+    }
+
+    100% {
+        top:0%
+    }
+}
+
+@keyframes moveUpDownBottom {
+    0% {
+        top: 70%;
+    }
+
+    100% {
+        top: 65%
+    }
+}
+
+.topLeft {
+
+    &::after {
+        left: 0%;
+        top: 0%;
+        background-image: url('../../../assets/images/leftBg.png') !important;
+        animation: moveUpDownTop 5s ease-in-out infinite alternate-reverse;
+    }
+
+    &::before {
+        right: -60%;
+        background-image: url('../../../assets/images/rightBg.png') !important;
+        animation: moveUpDownBottom 5s ease-in-out infinite alternate-reverse;
+    }
+
+}

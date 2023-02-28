@@ -1,4 +1,5 @@
 @import './_variables.scss';
+@import './animation';
 
 .text-center {
     text-align: center;
@@ -12,15 +13,9 @@
     cursor: pointer;
 }
 
-.link {
+.link,
+.active {
     position: relative;
-
-    a {
-        color: $primary-color;
-        transition: $transition-slow;
-        text-transform: uppercase;
-        font-size: $smaller-font-size;
-    }
 
     &::after,
     &::before {
@@ -39,57 +34,46 @@
     &::before {
         margin: 8px 0;
     }
+}
+
+.link {
 
     &:hover {
-        a {
-            color: $text-color;
-        }
 
         &::after,
         &::before {
-            width: 100%;
+            animation: animatedWidth .7s ease-in-out forwards;
         }
     }
 }
 
-// .button {
-//     background-color: $primary-color;
-//     color: $text-color-dark;
-//     width: fit-content;
-//     border: 2px solid $primary-color;
-//     padding: 1.2rem 1.8rem;
-//     letter-spacing: .2rem;
-//     text-transform: capitalize;
-//     font-size: $smaller-font-size;
-//     font-weight: $font-semi-bold;
-//     cursor: pointer;
-//     transition: $transition-fast;
-//     position: relative;
+.active {
+    
+    &::after,
+    &::before {
+        animation: animatedWidth .7s ease-in-out forwards;
+    }
+}
 
-//     &::before {
-//         content: '';
-//         width: 100px; 
-//         height: 100%;
-//         background-color: $container-bg;
-//         position: absolute;
-//         top: -100px; 
-//         right: 0;
-//         left: 0;
-//         width: 100%;
-//     }
 
-//     &:hover{
-//         background-color: $container-bg;
-//         color: $text-color;
-//         border-color: $primary-color;
-//     }
+.d-flex {
+    display: flex;
+}
 
-//     &:hover .button::before{ 
-//         top: 0;
-//     }
-
-// }
+.justify-center {
+    justify-content: center;
+}
 
 .primary-color {
     color: $primary-color;
+}
+
+.title {
+    font-family: $header-font;
+}
+
+.divider {
+    height: 90%;
+    width: 1px;
+    background-color: $divide-color;
 }

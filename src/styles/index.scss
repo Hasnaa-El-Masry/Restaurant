@@ -35,7 +35,7 @@ h5 {
 }
 
 h1 {
-    font-size: $biggest-font-size;
+    font-size: $h1-font-size;
 }
 
 h2 {
@@ -44,6 +44,14 @@ h2 {
 
 h3 {
     font-size: $h3-font-size;
+}
+
+h4{
+    font-size: $h4-font-size;
+}
+
+h5{
+    font-size: $h5-font-size;
 }
 
 small {
@@ -72,31 +80,31 @@ a {
     }
 }
 
-@include tablet {
-    $biggest-font-size: 5rem;
-    $h2-font-size: 2.75rem;
-    $h3-font-size: 2rem;
+// @include tablet {
+//     $h1-font-size: 5rem;
+//     $h2-font-size: 2.75rem;
+//     $h3-font-size: 2rem;
 
-    $normal-font-size: 1rem;
-    $small-font-size: .875rem;
-    $smaller-font-size: .813rem;
+//     $normal-font-size: 1rem;
+//     $small-font-size: .875rem;
+//     $smaller-font-size: .813rem;
 
-    h1 {
-         font-size: $biggest-font-size;
-    }
+//     h1 {
+//          font-size: $biggest-font-size;
+//     }
 
-    h2 {
-        font-size: $h2-font-size;
-    }
+//     h2 {
+//         font-size: $h2-font-size;
+//     }
 
-    h3 {
-        font-size: $h3-font-size;
-    }
+//     h3 {
+//         font-size: $h3-font-size;
+//     }
 
-    p{
-        font-size: $normal-font-size;
-    }
-}
+//     p{
+//         font-size: $normal-font-size;
+//     }
+// }
 
 img {
     display: block;

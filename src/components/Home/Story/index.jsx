@@ -16,7 +16,7 @@ const Story = () => {
       <Container className={classes.container}>
 
         <div className={classes.round_stamp}>
-          <img src={stamp} alt=''/>
+          <img src={stamp} alt='' />
         </div>
 
         <div className={classes.content}>
@@ -30,9 +30,11 @@ const Story = () => {
 
           <div className={classes.call}>
             <p> Book Through Call</p>
-            <Link className={`${classes.number} link`}>
-              +80 (400) 123 4567
-            </Link>
+            <div className="d-flex justify-center">
+              <Link className={`${classes.number} link`}>
+                +80 (400) 123 4567
+              </Link>
+            </div>
           </div>
 
           <div className={classes.action}>

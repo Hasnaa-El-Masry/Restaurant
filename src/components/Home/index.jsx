@@ -25,8 +25,8 @@ const Home = () => {
         <Offers/>
         <Story/>
         <SpecialDish/>
-        <section><Menu/></section>
-        <section><SpecialOffer/></section>
+        <Menu/>
+        <SpecialOffer/>
         <section><Testimonials/></section>
         <section><ContactUs/></section>
         <section><WhyUs/></section>
