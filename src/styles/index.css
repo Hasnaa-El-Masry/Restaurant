@@ -163,6 +163,39 @@ section {
   color: hsl(30, 8%, 5%);
 }
 
+.testimonials .swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal {
+  bottom: 0;
+  top: 70%;
+  display: flex;
+  gap: 8rem;
+  justify-content: center;
+  align-items: center;
+}
+.testimonials .swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal .swiper-pagination-bullet {
+  background: none;
+}
+.testimonials .swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal .swiper-pagination-bullet img {
+  width: 80px;
+  border-radius: 50%;
+  transition: all 0.4s ease-in-out;
+  transform: translate(-50%, -50%);
+}
+.testimonials .swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal .swiper-pagination-bullet h6 {
+  display: none;
+}
+.testimonials .swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background: none;
+}
+.testimonials .swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal .swiper-pagination-bullet.swiper-pagination-bullet-active img {
+  transform: translate(-50%, -50%) scale(1.2);
+}
+.testimonials .swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal .swiper-pagination-bullet.swiper-pagination-bullet-active h6 {
+  display: block;
+  transform: translate(-50%, -100%);
+  width: 80px;
+  color: hsl(38, 61%, 73%);
+}
+
 * {
   box-sizing: border-box;
   margin: 0;

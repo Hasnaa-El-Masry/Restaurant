@@ -1,4 +1,3 @@
-
 .swiper-button-prev,
 .swiper-button-next {
     border: 2px solid $primary-color;
@@ -13,3 +12,50 @@
     transform: rotate(-30deg);
     color: $container-bg;
 }
+
+
+.testimonials {
+
+    .swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal {
+        bottom: 0;
+        top: 70%;
+        display: flex;
+        gap: 8rem;
+        justify-content: center;
+        align-items: center;
+    
+        .swiper-pagination-bullet {
+            background: none;
+            img{
+                width: 80px;
+                border-radius: 50%;
+                transition: all .4s ease-in-out ;
+                transform: translate(-50%, -50%) ;
+            }
+            h6{
+                display: none;
+            }
+            
+        }
+    
+        .swiper-pagination-bullet.swiper-pagination-bullet-active {
+            background: none;
+    
+            img{
+                transform: translate(-50%,-50%) scale(1.2);
+            }
+
+            h6 {
+                display: block;
+                transform: translate(-50%,-100%);
+                width: 80px;
+                color: $primary-color;
+            }
+    
+        }
+    
+    }
+    
+}
+
+

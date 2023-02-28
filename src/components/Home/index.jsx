@@ -27,7 +27,7 @@ const Home = () => {
         <SpecialDish/>
         <Menu/>
         <SpecialOffer/>
-        <section><Testimonials/></section>
+        <Testimonials/>
         <section><ContactUs/></section>
         <section><WhyUs/></section>
         <section><Team/></section>
