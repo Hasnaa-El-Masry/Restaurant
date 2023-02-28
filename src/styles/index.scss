@@ -46,11 +46,11 @@ h3 {
     font-size: $h3-font-size;
 }
 
-h4{
+h4 {
     font-size: $h4-font-size;
 }
 
-h5{
+h5 {
     font-size: $h5-font-size;
 }
 
@@ -60,8 +60,9 @@ small {
 }
 
 p {
-    color: $text-color;
-    $normal-font-size: .938rem;
+    color: $text-color-light;
+    font-size: $small-font-size;
+    line-height: 1.8;
 }
 
 a {
@@ -75,7 +76,7 @@ a {
 }
 
 .main {
-    &> section:nth-child(odd) {
+    &>section:nth-child(odd) {
         background-color: $container-bg;
     }
 }
@@ -116,5 +117,3 @@ img {
 .swiper-pagination-bullet-active {
     background-color: $primary-color;
 }
-
-    

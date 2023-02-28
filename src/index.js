@@ -5,6 +5,8 @@ import { router } from './routes';
 
 // Styles Import:
 import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
 import "./styles/index.css";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

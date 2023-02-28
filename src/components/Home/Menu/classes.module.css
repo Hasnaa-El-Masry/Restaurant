@@ -94,27 +94,6 @@
 .container .menu_items .item .desc p {
   color: #a7a7a7;
 }
-.container .menu_items .img {
-  width: 100px;
-  overflow: hidden;
-  border-radius: 15px;
-  position: relative;
-}
-.container .menu_items .img img {
-  transition: all 0.4s ease-in-out;
-  cursor: pointer;
-}
-.container .menu_items .img::after {
-  content: "";
-  width: 100%;
-  height: 100%;
-  background-color: rgba(228, 197, 144, 0.5);
-  position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 0;
-  transition: all 0.4s ease-in-out;
-}
 .container .menu_items .img:hover img {
   transform: scale(1.1);
 }

@@ -27,3 +27,39 @@
 .special_offer::after {
   right: 0;
 }
+.special_offer .img {
+  width: 100%;
+  border-radius: 0;
+}
+.special_offer .img::after {
+  transform: scale(0);
+  background-color: rgba(255, 255, 255, 0.3);
+  opacity: 1;
+}
+.special_offer .img:hover img {
+  transform: scale(1.1) rotate(5deg);
+}
+.special_offer .img:hover::after {
+  background-color: rgba(228, 197, 144, 0.3);
+  transform: scale(1.1);
+}
+.special_offer .slider {
+  padding: 3rem 0;
+}
+.special_offer .slide .slide_item {
+  display: grid;
+  gap: 1rem;
+  text-align: center;
+}
+.special_offer .slide .slide_item .price {
+  color: hsl(38, 61%, 73%);
+}
+.special_offer .slide:nth-child(even) {
+  transform: translateY(-10%);
+}
+.special_offer .action {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
+}

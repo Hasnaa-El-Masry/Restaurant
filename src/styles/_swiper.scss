@@ -1,0 +1,15 @@
+
+.swiper-button-prev,
+.swiper-button-next {
+    border: 2px solid $primary-color;
+    background-color: $primary-color;
+    padding: 1.5rem;
+    transform: rotate(30deg);
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+    font-size: 1rem;
+    transform: rotate(-30deg);
+    color: $container-bg;
+}

@@ -5,10 +5,6 @@
     position: relative;
     z-index: 1;
 
-
- 
-
-
         .menu {
             border: 1px solid #aaaaaa70;
             border-left: none;
@@ -91,28 +87,6 @@
 
             .img {
 
-                width: 100px;
-                overflow: hidden;
-                border-radius: 15px;
-                position: relative;
-
-                img {
-                    transition: $transition-fast;
-                    cursor: pointer;
-                }
-
-                &::after {
-                    content: '';
-                    width: 100%;
-                    height: 100%;
-                    background-color: rgba($color: $primary-color, $alpha: 0.5);
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    opacity: 0;
-                    transition: $transition-fast;
-                }
-
                 &:hover {
 
                     img {
@@ -124,13 +98,8 @@
                     }
                 }
 
-
-
             }
         }
-
-
-    
 
         .timing_container {
             display: grid;

@@ -7,6 +7,7 @@ import Container from '../../UI/Container';
 import { useState } from 'react';
 import { TbSquareRotated } from 'react-icons/tb';
 import { Link } from 'react-router-dom';
+import Image from '../../UI/Image';
 
 const tabs = ['Morning', 'WEEKDAY', 'LUNCH', 'DINNER'];
 const dishes = [
@@ -60,11 +61,9 @@ const Menu = () => {
             <div className={classes.col}>
 
               <div className={`${classes.item}`}>
-                <div className={`${classes.img}`}>
-                  <Link to=''>
-                    <img src={img1} alt="" />
-                  </Link>
-                </div>
+
+                <Image src={img1} style={classes.img} />
+
                 <div className={`${classes.content}`}>
                   <div className={`${classes.title_conatiner}`}>
                     <div className={`${classes.title}`}>
@@ -82,9 +81,7 @@ const Menu = () => {
               </div>
 
               <div className={`${classes.item}`}>
-                <div className={`${classes.img}`}>
-                  <img src={img1} alt="" />
-                </div>
+                <Image src={img1} style={classes.img} />
                 <div className={`${classes.content}`}>
                   <div className={`${classes.title_conatiner}`}>
                     <div className={`${classes.title}`}>
@@ -102,9 +99,7 @@ const Menu = () => {
               </div>
 
               <div className={`${classes.item}`}>
-                <div className={`${classes.img}`}>
-                  <img src={img1} alt="" />
-                </div>
+                <Image src={img1} style={classes.img} />
                 <div className={`${classes.content}`}>
                   <div className={`${classes.title_conatiner}`}>
                     <div className={`${classes.title}`}>
@@ -120,6 +115,7 @@ const Menu = () => {
                   </div>
                 </div>
               </div>
+
 
             </div>
 
@@ -128,9 +124,7 @@ const Menu = () => {
             <div className={classes.col}>
 
               <div className={`${classes.item}`}>
-                <div className={`${classes.img}`}>
-                  <img src={img1} alt="" />
-                </div>
+                <Image src={img1} style={classes.img} />
                 <div className={`${classes.content}`}>
                   <div className={`${classes.title_conatiner}`}>
                     <div className={`${classes.title}`}>
@@ -148,9 +142,7 @@ const Menu = () => {
               </div>
 
               <div className={`${classes.item}`}>
-                <div className={`${classes.img}`}>
-                  <img src={img1} alt="" />
-                </div>
+                <Image src={img1} style={classes.img} />
                 <div className={`${classes.content}`}>
                   <div className={`${classes.title_conatiner}`}>
                     <div className={`${classes.title}`}>
@@ -168,9 +160,7 @@ const Menu = () => {
               </div>
 
               <div className={`${classes.item}`}>
-                <div className={`${classes.img}`}>
-                  <img src={img1} alt="" />
-                </div>
+                <Image src={img1} style={classes.img} />
                 <div className={`${classes.content}`}>
                   <div className={`${classes.title_conatiner}`}>
                     <div className={`${classes.title}`}>
@@ -186,6 +176,7 @@ const Menu = () => {
                   </div>
                 </div>
               </div>
+
 
             </div>
 

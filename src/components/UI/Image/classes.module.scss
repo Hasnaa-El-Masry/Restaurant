@@ -1,0 +1,27 @@
+@import '../../../styles/variables';
+
+.img_wrapper {
+
+    width: 100px;
+    overflow: hidden;
+    border-radius: 15px;
+    position: relative;
+    cursor: pointer;
+
+    img {
+        transition: $transition-fast;
+    }
+
+    &::after {
+        content: '';
+        width: 100%;
+        height: 100%;
+        background-color: rgba($color: $primary-color, $alpha: 0.5);
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        transition: $transition-fast;
+    }
+
+}
