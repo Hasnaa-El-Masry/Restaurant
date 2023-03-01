@@ -29,7 +29,7 @@ const Home = () => {
         <SpecialOffer/>
         <Testimonials/>
         <ContactUs/>
-        <section><WhyUs/></section>
+        <WhyUs/>
         <section><Team/></section>
         <section><Intro/></section>
         <section><News/></section>

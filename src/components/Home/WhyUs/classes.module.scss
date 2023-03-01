@@ -1,1 +1,53 @@
 @import '../../../styles/variables';
+
+.whyus{
+    padding-top: 0;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 3rem;
+
+    &>.item:nth-child(even) {
+        background-color: $container-bg;
+    }
+
+    &>.item:nth-child(odd) {
+        background-color: $body-bg-light;
+    }
+
+    .item {
+        text-align: center;
+        display: grid;
+        row-gap: 1rem;
+        padding: 2.2rem;
+
+
+        .img {
+
+            img {
+                width: 100px;
+                margin: auto;
+                transition: $transition-fast;
+            }
+
+            &:hover img {
+                animation: rotateScale .5s ease-in-out forwards;
+            }
+
+        }
+        
+
+    }
+}
+
+@keyframes rotateScale {
+    0% {
+        transform: rotate(0deg) scale(0);
+    }
+
+    100% {
+        transform: rotate(360deg) scale(1);
+    }
+}

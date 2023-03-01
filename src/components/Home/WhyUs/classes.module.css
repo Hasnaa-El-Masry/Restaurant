@@ -8,3 +8,41 @@
 /* =====  Margins  ===== */
 /* =====  Z index  ===== */
 /* ===== Transition  ===== */
+.whyus {
+  padding-top: 0;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 3rem;
+}
+.content > .item:nth-child(even) {
+  background-color: hsl(30, 8%, 5%);
+}
+.content > .item:nth-child(odd) {
+  background-color: hsl(210, 4%, 11%);
+}
+.content .item {
+  text-align: center;
+  display: grid;
+  row-gap: 1rem;
+  padding: 2.2rem;
+}
+.content .item .img img {
+  width: 100px;
+  margin: auto;
+  transition: all 0.4s ease-in-out;
+}
+.content .item .img:hover img {
+  animation: rotateScale 0.5s ease-in-out forwards;
+}
+
+@keyframes rotateScale {
+  0% {
+    transform: rotate(0deg) scale(0);
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+  }
+}
