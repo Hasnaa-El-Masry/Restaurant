@@ -8,3 +8,80 @@
 /* =====  Margins  ===== */
 /* =====  Z index  ===== */
 /* ===== Transition  ===== */
+.team {
+  background-color: hsl(210, 4%, 9%) !important;
+}
+.team .content {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 3.5rem;
+}
+.team .content .item {
+  display: grid;
+  gap: 2rem;
+}
+.team .content .item__content {
+  display: grid;
+  gap: 1rem;
+}
+.team .content .item h3 {
+  transition: all 0.4s ease-in-out;
+}
+.team .content .item h3:hover {
+  cursor: pointer;
+  color: hsl(38, 61%, 73%);
+}
+.team .content .item span {
+  color: hsl(38, 61%, 73%);
+  font-size: 0.75rem;
+  letter-spacing: 0.3rem;
+  font-weight: 600;
+}
+.team .content .item .image {
+  position: relative;
+  overflow: hidden;
+}
+.team .content .item .image .overlay {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(228, 197, 144, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  flex-direction: auto;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  transition: transform 0.4s ease;
+  transform: scale(0, 1);
+  transform-origin: right center;
+}
+.team .content .item .image .overlay .social ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  flex-direction: auto;
+}
+.team .content .item .image .overlay .social ul li {
+  padding: 0.7rem;
+  background-color: hsl(30, 8%, 5%);
+  transition: all 0.4s ease-in-out;
+  cursor: pointer;
+}
+.team .content .item .image .overlay .social ul li:hover {
+  background-color: hsl(38, 61%, 73%);
+}
+.team .content .item .image .overlay .social ul li:hover a {
+  color: hsl(30, 8%, 5%);
+}
+.team .content .item .image .overlay .social ul li svg {
+  font-size: 1.1rem;
+}
+.team .content .item .image:hover .overlay {
+  transform: scale(1, 1);
+  transform-origin: left center;
+}

@@ -30,7 +30,7 @@ const Home = () => {
         <Testimonials/>
         <ContactUs/>
         <WhyUs/>
-        <section><Team/></section>
+        <Team/>
         <section><Intro/></section>
         <section><News/></section>
       </main>
