@@ -10,6 +10,7 @@
 /* ===== Transition  ===== */
 .team {
   background-color: hsl(210, 4%, 9%) !important;
+  padding-top: 3rem;
 }
 .team .content {
   display: grid;

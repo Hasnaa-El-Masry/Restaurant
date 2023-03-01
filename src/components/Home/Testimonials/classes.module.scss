@@ -33,28 +33,8 @@
                     font-size: 2rem;
                     margin: auto;
                 }
-
-                .squares {
-                    svg {
-                        color: $primary-color;
-                        animation: rotate 3s ease-in infinite alternate;
-                        font-size: .8rem;
-                    }
-                }
             }
         }
-    }
-
-}
-
-@keyframes rotate {
-
-    0% {
-        transform: rotate(0deg);
-    }
-
-    100% {
-        transform: rotate(360deg);
     }
 
 }

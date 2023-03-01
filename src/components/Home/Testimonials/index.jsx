@@ -7,8 +7,7 @@ import img_2 from "../../../assets/images/testi-2.jpg";
 import img_3 from "../../../assets/images/testi-3.jpg";
 import { RiDoubleQuotesR } from 'react-icons/ri'
 import { TbSquareRotated } from 'react-icons/tb'
-
-const avatars = [img_1,img_2,img_3];
+import AnimatedSquares from '../../AnimatedSquares';
 
 const Testimonials = () => {
   return (
@@ -29,31 +28,23 @@ const Testimonials = () => {
             <SwiperSlide className={classes.quote_container}>
               <RiDoubleQuotesR className={classes.quote_mark} />
               <quote>I wanted to thank you for inviting me down for that amazing dinner the other night. The food was extraordinary.</quote>
-              <div className={classes.squares}>
-                <TbSquareRotated />
-                <TbSquareRotated />
-                <TbSquareRotated />
-              </div>
+              <AnimatedSquares />
+
             </SwiperSlide>
 
             <SwiperSlide className={classes.quote_container}>
               <RiDoubleQuotesR className={classes.quote_mark} />
               <quote>I wanted to thank you for inviting me down for that amazing dinner the other night. The food was extraordinary.</quote>
-              <div className={classes.squares}>
-                <TbSquareRotated />
-                <TbSquareRotated />
-                <TbSquareRotated />
-              </div>
+
+              <AnimatedSquares />
+
             </SwiperSlide>
 
             <SwiperSlide className={classes.quote_container}>
               <RiDoubleQuotesR className={classes.quote_mark} />
               <quote>I wanted to thank you for inviting me down for that amazing dinner the other night. The food was extraordinary.</quote>
-              <div className={classes.squares}>
-                <TbSquareRotated />
-                <TbSquareRotated />
-                <TbSquareRotated />
-              </div>
+              <AnimatedSquares />
+
             </SwiperSlide>
 
           </Swiper>

@@ -8,3 +8,178 @@
 /* =====  Margins  ===== */
 /* =====  Z index  ===== */
 /* ===== Transition  ===== */
+@import url("https://fonts.googleapis.com/css2?family=Forum&family=Gloock&family=Lora&family=Raleway&family=Space+Mono&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap");
+/* ===== Colors   ===== */
+/* ===== Font and Typography  ===== */
+/* ===== Container width  ===== */
+/* ===== Section  ===== */
+/* =====  Font Weight  ===== */
+/* =====  Margins  ===== */
+/* =====  Z index  ===== */
+/* ===== Transition  ===== */
+@keyframes move {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 300%;
+  }
+}
+@keyframes animatedWidth {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+.text-center {
+  text-align: center;
+}
+
+.icon {
+  color: hsl(38, 61%, 73%);
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.link,
+.active {
+  position: relative;
+}
+.link::after, .link::before,
+.active::after,
+.active::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  width: 0%;
+  height: 1px;
+  transform: translateX(-50%);
+  margin: 5px 0;
+  background-color: hsl(38, 61%, 73%);
+  transition: all 0.7s ease-in-out;
+}
+.link::before,
+.active::before {
+  margin: 8px 0;
+}
+
+.link:hover::after, .link:hover::before {
+  animation: animatedWidth 0.7s ease-in-out forwards;
+}
+
+.active::after, .active::before {
+  animation: animatedWidth 0.7s ease-in-out forwards;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.primary-color {
+  color: hsl(38, 61%, 73%);
+}
+
+.title {
+  font-family: "Forum", cursive;
+}
+
+.divider {
+  height: 90%;
+  width: 1px;
+  background-color: rgba(170, 170, 170, 0.4392156863);
+}
+
+.relative, .intro .container .fact_counter {
+  position: relative;
+}
+.relative::after, .intro .container .fact_counter::after, .relative::before, .intro .container .fact_counter::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.intro {
+  background: linear-gradient(90deg, hsla(0, 0%, 0%, 0.9) 0, hsla(0, 0%, 0%, 0.4)), url("../../../assets/images/intro-bg.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+}
+.intro .container {
+  display: grid;
+  row-gap: 3rem;
+}
+.intro .container .shape {
+  text-align: center;
+}
+.intro .container .content {
+  text-align: center;
+  width: 60%;
+  margin: auto;
+  line-height: 1.4;
+}
+.intro .container .content h3 {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+.intro .container .content span {
+  color: hsl(38, 61%, 73%);
+  font-size: 0.938rem;
+  letter-spacing: 0.2rem;
+}
+.intro .container .fact_counter {
+  margin-top: 5rem;
+}
+.intro .container .fact_counter::before {
+  background-image: url("../../../assets/images/intro_pattern.png");
+  height: 30%;
+  top: -130%;
+}
+.intro .container .fact_counter::after {
+  display: none;
+}
+.intro .container .fact_counter .facts {
+  display: grid;
+  grid-template-columns: 15% 15% 15% 15%;
+  justify-content: space-between;
+}
+.intro .container .fact_counter .facts .fact {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: auto;
+  flex-direction: auto;
+}
+.intro .container .fact_counter .facts .fact_count {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: auto;
+  flex-direction: auto;
+  font-family: "Forum", cursive;
+}
+.intro .container .fact_counter .facts .fact_count span {
+  font-size: 3rem;
+}
+.intro .container .fact_counter .facts .fact_count svg {
+  font-size: 2rem;
+}
+.intro .container .fact_counter .facts .fact_text {
+  color: hsl(38, 61%, 73%);
+  letter-spacing: 0.2rem;
+  line-height: 1.7;
+  font-size: 0.938rem;
+}

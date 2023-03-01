@@ -31,7 +31,7 @@ const Home = () => {
         <ContactUs/>
         <WhyUs/>
         <Team/>
-        <section><Intro/></section>
+        <Intro/>
         <section><News/></section>
       </main>
     </>

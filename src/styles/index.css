@@ -148,6 +148,20 @@ section {
   background-color: rgba(170, 170, 170, 0.4392156863);
 }
 
+.relative {
+  position: relative;
+}
+.relative::after, .relative::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
 .swiper-button-prev,
 .swiper-button-next {
   border: 2px solid hsl(38, 61%, 73%);

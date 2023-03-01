@@ -1,0 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=Forum&family=Gloock&family=Lora&family=Raleway&family=Space+Mono&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap");
+/* ===== Colors   ===== */
+/* ===== Font and Typography  ===== */
+/* ===== Container width  ===== */
+/* ===== Section  ===== */
+/* =====  Font Weight  ===== */
+/* =====  Margins  ===== */
+/* =====  Z index  ===== */
+/* ===== Transition  ===== */
+.squares svg {
+  color: hsl(38, 61%, 73%);
+  animation: rotate 3s ease-in infinite alternate;
+  font-size: 0.8rem;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

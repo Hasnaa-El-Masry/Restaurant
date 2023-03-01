@@ -38,17 +38,3 @@
   font-size: 2rem;
   margin: auto;
 }
-.testimonials .container .slide .quote_container .squares svg {
-  color: hsl(38, 61%, 73%);
-  animation: rotate 3s ease-in infinite alternate;
-  font-size: 0.8rem;
-}
-
-@keyframes rotate {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
