@@ -1,1 +1,138 @@
 @import '../../../styles/variables';
+@import '../../../styles/mixins';
+
+.contact {
+    background-color: $body-bg !important;
+    padding: 0;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    background-color: $container-bg;
+    transform: translateY(-30%);
+
+    .form_container {
+        text-align: center;
+        padding: 4rem 1rem;
+
+        .header {
+            margin-bottom: 3rem;
+
+            p {
+                font-size: $normal-font-size;
+                color: $text-color;
+
+                span {
+                    color: $primary-color;
+                    font-size: $h5-font-size;
+                    margin: 0 .6rem;
+                }
+            }
+        }
+
+        .form {
+            padding: 0 3rem;
+
+            form {
+
+                display: grid;
+                gap: 1rem;
+
+                input,
+                textarea,
+                select {
+
+                    width: 100%;
+                    padding: 1.3rem;
+                    color: $text-color;
+                    background-color: $body-bg;
+                    border: 1px solid $divide-color;
+                    font-size: 1rem;
+
+                    &::placeholder {
+                        color: $text-color
+                    }
+
+                    &:focus {
+                        border-color: $primary-color
+                    }
+
+
+
+                }
+
+                input[type="date"], select {
+                  position: relative;
+                  padding-inline-start: 3rem;
+                }
+
+                input[type="date"]::-webkit-calendar-picker-indicator {
+                    position: absolute;
+                    left: 1rem;
+                    filter: invert(1);
+                }
+                
+                .input_group {
+
+                    @include flex(space-between, center, 1rem);
+
+                    .select {
+                        width: 100%;
+                        position: relative;
+
+                        svg {
+                            position: absolute;
+                            top: 50%;
+                            left: 1rem;
+                            transform: translateY(-50%);
+                            z-index: 1;
+                        }
+                    }
+
+                }
+
+            }
+
+        }
+
+    }
+
+    .location {
+        padding: 4rem 1rem;
+        text-align: center;
+        background-image: url('../../../assets/images/address-pattern.png') ;
+
+        .header {
+            margin-bottom: 2rem;
+            display: grid;
+            row-gap: 1.3rem;
+            .number {
+                @include flex(center,center);
+                font-size:$h3-font-size;
+                a{
+                    color: $primary-color;
+                }
+            }
+            svg {
+                margin: auto;
+            }
+        }
+
+        .address {
+            ul {
+                display: grid;
+                row-gap: 1rem;
+
+                li {
+                    p {
+                        width: 50%;
+                        margin: .5rem auto;
+                        font-size: $normal-font-size
+                    }
+                };
+            }
+        }
+
+    }
+}
