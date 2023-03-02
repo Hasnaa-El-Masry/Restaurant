@@ -8,24 +8,140 @@
 /* =====  Margins  ===== */
 /* =====  Z index  ===== */
 /* ===== Transition  ===== */
+@import url("https://fonts.googleapis.com/css2?family=Forum&family=Gloock&family=Lora&family=Raleway&family=Space+Mono&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap");
+/* ===== Colors   ===== */
+/* ===== Font and Typography  ===== */
+/* ===== Container width  ===== */
+/* ===== Section  ===== */
+/* =====  Font Weight  ===== */
+/* =====  Margins  ===== */
+/* =====  Z index  ===== */
+/* ===== Transition  ===== */
+@keyframes move {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 300%;
+  }
+}
+@keyframes animatedWidth {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+.text-center {
+  text-align: center;
+}
+
+.icon {
+  color: hsl(38, 61%, 73%);
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.link,
+.active {
+  position: relative;
+}
+.link::after, .link::before,
+.active::after,
+.active::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  width: 0%;
+  height: 1px;
+  transform: translateX(-50%);
+  margin: 5px 0;
+  background-color: hsl(38, 61%, 73%);
+  transition: all 0.7s ease-in-out;
+}
+.link::before,
+.active::before {
+  margin: 8px 0;
+}
+
+.link:hover::after, .link:hover::before {
+  animation: animatedWidth 0.7s ease-in-out forwards;
+}
+
+.active::after, .active::before {
+  animation: animatedWidth 0.7s ease-in-out forwards;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.primary-color {
+  color: hsl(38, 61%, 73%);
+}
+
+.title {
+  font-family: "Forum", cursive;
+}
+
+.divider {
+  height: 90%;
+  width: 1px;
+  background-color: rgba(170, 170, 170, 0.4392156863);
+}
+
+.relative, .special_offer {
+  position: relative;
+}
+.relative::after, .special_offer::after, .relative::before, .special_offer::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.sidesPatterenbg::before, .special_offer::before, .sidesPatterenbg::after, .special_offer::after {
+  width: 15px;
+  height: 100%;
+  background-image: url("../assets/images/sidePattern.png");
+}
+.sidesPatterenbg::before, .special_offer::before {
+  left: 0;
+}
+.sidesPatterenbg::after, .special_offer::after {
+  right: 0;
+  left: auto;
+}
+
+.skewShape::after {
+  content: "";
+  position: absolute;
+  left: -100%;
+  right: 50%;
+  width: 140px;
+  min-height: 400px;
+  background: linear-gradient(90deg, hsla(0, 0%, 100%, 0) 0, hsla(0, 0%, 100%, 0.4));
+  transform: skewX(-25deg);
+  transition: all 0.7s ease-in-out;
+  z-index: 3;
+}
+
 .special_offer {
   padding-left: 15px;
   padding-right: 15px;
-  position: relative;
-}
-.special_offer::before, .special_offer::after {
-  content: "";
-  position: absolute;
-  width: 15px;
-  height: 100%;
-  top: 0;
-  background-image: url("../../../assets/images/sidePattern.png");
-}
-.special_offer::before {
-  left: 0;
-}
-.special_offer::after {
-  right: 0;
 }
 .special_offer .img {
   width: 100%;

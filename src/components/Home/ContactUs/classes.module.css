@@ -42,29 +42,6 @@
   display: grid;
   gap: 1rem;
 }
-.container .form_container .form form input,
-.container .form_container .form form textarea,
-.container .form_container .form form select {
-  width: 100%;
-  padding: 1.3rem;
-  color: #fff;
-  background-color: hsl(210, 4%, 9%);
-  border: 1px solid rgba(170, 170, 170, 0.4392156863);
-  font-size: 1rem;
-}
-.container .form_container .form form input::-moz-placeholder, .container .form_container .form form textarea::-moz-placeholder, .container .form_container .form form select::-moz-placeholder {
-  color: #fff;
-}
-.container .form_container .form form input::placeholder,
-.container .form_container .form form textarea::placeholder,
-.container .form_container .form form select::placeholder {
-  color: #fff;
-}
-.container .form_container .form form input:focus,
-.container .form_container .form form textarea:focus,
-.container .form_container .form form select:focus {
-  border-color: hsl(38, 61%, 73%);
-}
 .container .form_container .form form input[type=date], .container .form_container .form form select {
   position: relative;
   -webkit-padding-start: 3rem;
@@ -81,17 +58,6 @@
   justify-content: space-between;
   gap: 1rem;
   flex-direction: auto;
-}
-.container .form_container .form form .input_group .select {
-  width: 100%;
-  position: relative;
-}
-.container .form_container .form form .input_group .select svg {
-  position: absolute;
-  top: 50%;
-  left: 1rem;
-  transform: translateY(-50%);
-  z-index: 1;
 }
 .container .location {
   padding: 4rem 1rem;

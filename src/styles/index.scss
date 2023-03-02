@@ -14,9 +14,9 @@ html {
     scroll-behavior: smooth;
 }
 
-::-webkit-scrollbar {
-    display: none;
-}
+// ::-webkit-scrollbar {
+//     display: none;
+// }
 
 body {
     background-color: $body-bg;
@@ -78,6 +78,26 @@ a {
 .main {
     &>section:nth-child(odd) {
         background-color: $container-bg;
+    }
+}
+
+input,
+textarea,
+select {
+
+    width: 100%;
+    padding: 1.3rem;
+    color: $text-color;
+    background-color: $body-bg;
+    border: 1px solid $divide-color;
+    font-size: 1rem;
+
+    &::placeholder {
+        color: $text-color
+    }
+
+    &:focus {
+        border-color: $primary-color
     }
 }
 

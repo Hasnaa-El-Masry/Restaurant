@@ -5,6 +5,7 @@ import { AiOutlineUser } from 'react-icons/ai'
 import { BsClockFill } from 'react-icons/bs'
 import { Link } from 'react-router-dom'
 import Container from '../../UI/Container'
+import IconInput from '../../UI/IconInput';
 
 const ContactUs = () => {
 
@@ -28,35 +29,37 @@ const ContactUs = () => {
 
               <div className={classes.input_group}>
 
-                <div className={classes.select}>
-                  <AiOutlineUser />
-                  <select value='1'>
-                    <option value="1">1 person</option>
-                    <option value="2">2 person</option>
-                    <option value="3">3 person</option>
-                    <option value="4">4 person</option>
-                    <option value="5">5 person</option>
-                  </select>
-                </div>
+                <IconInput
+                  icon={({ className }) => <AiOutlineUser className={className} />}
+                  input={({ className }) =>
+                    <select value='1' className={className}>
+                      <option value="1">1 person</option>
+                      <option value="2">2 person</option>
+                      <option value="3">3 person</option>
+                      <option value="4">4 person</option>
+                      <option value="5">5 person</option>
+                    </select>
+                  }
+                />
 
-                <div className={classes.select}>
+                <div>
                   <input type="date" />
                 </div>
 
-                <div className={classes.select}>
-                  <BsClockFill />
-                  <select value=''>
-                    <option value="">8:00 am</option>
-                    <option value="">9:00 am</option>
-                    <option value="">10:00 am</option>
-                    <option value="">11:00 am</option>
-                    <option value="">12:00 am</option>
-                  </select>
-
-                </div>
-
+                <IconInput
+                  icon={({ className }) => <BsClockFill className={className} />}
+                  input={({ className }) =>
+                    <select value='' className={className}>
+                      <option value="">8:00 am</option>
+                      <option value="">9:00 am</option>
+                      <option value="">10:00 am</option>
+                      <option value="">11:00 am</option>
+                      <option value="">12:00 am</option>
+                    </select>}
+                />
 
               </div>
+              
               <textarea name="" id="" cols="20" rows="4" placeholder='Message'></textarea>
               <Button variant='primary' style={classes.action}>Book A Table</Button>
 
@@ -71,7 +74,7 @@ const ContactUs = () => {
             <h2>Contact Us</h2>
             <span>Booking Request</span>
             <div className={classes.number}> <Link to='' className='link'>+88-123-123456</Link></div>
-            <TbSquareRotated className='icon'/>
+            <TbSquareRotated className='icon' />
           </div>
 
           <div className={classes.address}>

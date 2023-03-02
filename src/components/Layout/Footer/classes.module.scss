@@ -1,6 +1,98 @@
+@import '../../../styles/mixins';
+@import '../../../styles/variables';
+@import '../../../styles/reusable';
+
 .footer {
-    background: linear-gradient(90deg, hsla(0, 0%, 0%, 0.9) 0, hsla(0, 0%, 0%, .4)), 
-    url('../../../assets/images/footer-bg.jpg');
+
+    background: linear-gradient(90deg, hsla(0, 0%, 0%, 0.9) 0, hsla(0, 0%, 0%, .4)),
+        url('../../../assets/images/footer-bg.jpg');
     background-size: cover;
     min-height: 100vh;
+    text-align: center;
+    padding: 5rem 0;
+
+    .container {
+        @include grid (3rem, 1fr );
+
+    }
+
+    .content {
+        @include grid (auto, 1fr 2fr 1fr, space-between, center);
+
+        ul {
+
+            margin-bottom: 7rem;
+
+            li {
+                @include flex (center, center, 1.5rem, column);
+
+                a {
+                    color: $text-color-light;
+                    letter-spacing: .1rem;
+                    width: fit-content;
+                    text-transform: uppercase;
+                }
+            }
+
+
+        }
+
+
+        .address_info {
+            background-image: url('../../../assets/images/footer-bg-pattern.png');
+            @include grid (1rem, 1fr, space-between, center);
+            background-color: $container-bg;
+            padding: 7rem 5rem;
+
+            @extend .relative;
+            @extend .sidesPatterenbg;
+
+            .logo {
+                margin-bottom: 2rem;
+
+                img {
+                    width: 30%;
+                    margin: auto;
+                }
+            }
+
+            a {
+                color: $text-color-light;
+            }
+
+            p {
+                margin: .4rem;
+                font-size: $normal-font-size;
+            }
+
+            .action {
+                @include flex(center, stretch);
+                // background-color: red;
+
+                .btn {
+                    padding: 1.5rem 3rem;
+                    width: 30%;
+                }
+            }
+
+            ;
+
+        }
+
+    }
+
+    .copy {
+
+        p {
+            @include flex (center, center);
+            font-size: $normal-font-size;
+
+            span {
+                a {
+                    color: $primary-color;
+                }
+            }
+        }
+
+    }
 }

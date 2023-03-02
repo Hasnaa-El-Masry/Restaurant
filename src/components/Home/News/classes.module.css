@@ -113,6 +113,19 @@
   right: 0;
 }
 
+.sidesPatterenbg::before, .sidesPatterenbg::after {
+  width: 15px;
+  height: 100%;
+  background-image: url("../assets/images/sidePattern.png");
+}
+.sidesPatterenbg::before {
+  left: 0;
+}
+.sidesPatterenbg::after {
+  right: 0;
+  left: auto;
+}
+
 .skewShape::after, .news .news .new::after {
   content: "";
   position: absolute;
@@ -143,7 +156,7 @@
   }
 }
 .news .news {
-  display: flex;
+  display: grid;
   align-items: auto;
   justify-content: space-between;
   gap: 2.5rem;

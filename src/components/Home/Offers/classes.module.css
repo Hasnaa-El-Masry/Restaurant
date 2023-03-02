@@ -129,6 +129,19 @@
   right: 0;
 }
 
+.sidesPatterenbg::before, .sidesPatterenbg::after {
+  width: 15px;
+  height: 100%;
+  background-image: url("../assets/images/sidePattern.png");
+}
+.sidesPatterenbg::before {
+  left: 0;
+}
+.sidesPatterenbg::after {
+  right: 0;
+  left: auto;
+}
+
 .skewShape::after, .offers .offer__item_img::after {
   content: "";
   position: absolute;

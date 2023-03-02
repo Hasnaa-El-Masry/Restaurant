@@ -1,27 +1,12 @@
 @import '../../../styles/variables';
+@import '../../../styles/reusable';
 
 .special_offer {
     padding-left: 15px;
     padding-right: 15px;
-    position: relative;
 
-    &::before,
-    &::after {
-        content: "";
-        position: absolute;
-        width: 15px;
-        height: 100%;
-        top: 0;
-        background-image: url('../../../assets/images/sidePattern.png');
-    }
-
-    &::before {
-        left: 0;
-    }
-
-    &::after {
-        right: 0;
-    }
+    @extend .relative;
+    @extend .sidesPatterenbg;
 
     .img {
         width: 100%;
@@ -76,6 +61,5 @@
         justify-content: center;
         margin-top: 1rem;
     }
-
 
 }

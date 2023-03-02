@@ -4,13 +4,15 @@ import Container from '../../UI/Container';
 import Button from '../../UI/Button';
 import classes from './classes.module.scss';
 import logo from '../../../assets/images/logo.png';
-import {MdOutlineEmail} from 'react-icons/md';
+import { MdOutlineEmail } from 'react-icons/md';
+import IconInput from '../../UI/IconInput';
 
 const Footer = () => {
   return (
     <footer className={classes.footer}>
 
       <Container className={classes.container}>
+
         <div className={classes.content}>
           <div className={classes.pages}>
             <ul>
@@ -30,15 +32,18 @@ const Footer = () => {
             </div>
 
             <div className={classes.location}>
-              <ul>
-                <li>
-                  <p><Link to='/' className='link'>home</Link></p>
-                  <p><Link to='/' className='link'>menus</Link></p>
-                  <p><Link to='/' className='link'>about us</Link></p>
-                  <p><Link to='/' className='link'>our chefs</Link></p>
-                  <p><Link to='/' className='link'>contact</Link></p>
-                </li>
-              </ul>
+              <p>Restaurant St, Delicious City, London 9578, UK</p>
+              <p>
+                <Link to=''>
+                  booking@domainname.com
+                </Link>
+              </p>
+              <p>
+                <Link to=''>
+                  Booking Request : +88-123-123456
+                </Link>
+              </p>
+              <p>Open : 09:00 am - 01:00 pm</p>
             </div>
 
             <div className={classes.shape}>
@@ -46,9 +51,9 @@ const Footer = () => {
             </div>
 
             <div className={classes.title}>
-              <h2>
+              <h3>
                 Get News & Offers
-              </h2>
+              </h3>
               <p>
                 Subscribe us & Get
                 <span>
@@ -58,12 +63,13 @@ const Footer = () => {
             </div>
 
             <div className={classes.action}>
-              <Button>subscribe</Button>
-              <div className={classes.input_group}>
-                <input type="text" placeholder='Your email' />
-                <MdOutlineEmail/>
 
-              </div>
+              <IconInput
+                icon={({ className }) => <MdOutlineEmail className={className} />}
+                input={({ className }) => <input className={className} type="text" placeholder='Your email' />}
+              />
+              <Button style={classes.btn} variant='primary'>subscribe</Button>
+
             </div>
 
           </div>
@@ -79,15 +85,19 @@ const Footer = () => {
             </ul>
           </div>
         </div>
+
         <div className={classes.copy}>
           <p>
-            &copy; 2023 Restaurt. All Rights Reserved | Crafted by <Link to=''>Hasnaa Elmasry</Link>
+            &copy; 2023 Restaurt. All Rights Reserved | Crafted by
+            <span>
+              <Link to=''>Hasnaa Elmasry</Link>
+            </span>
           </p>
         </div>
 
       </Container>
 
-    </footer>
+    </footer >
   )
 }
 

@@ -7,7 +7,7 @@
 }
 
 @mixin grid($gap: auto, $grid-template-columns: auto, $justify: auto, $align: auto, ) {
-    display: flex;
+    display: grid;
     align-items: $align;
     justify-content: $justify;
     gap: $gap;

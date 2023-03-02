@@ -162,6 +162,19 @@ section {
   right: 0;
 }
 
+.sidesPatterenbg::before, .sidesPatterenbg::after {
+  width: 15px;
+  height: 100%;
+  background-image: url("../assets/images/sidePattern.png");
+}
+.sidesPatterenbg::before {
+  left: 0;
+}
+.sidesPatterenbg::after {
+  right: 0;
+  left: auto;
+}
+
 .skewShape::after {
   content: "";
   position: absolute;
@@ -237,10 +250,6 @@ html {
   scroll-behavior: smooth;
 }
 
-::-webkit-scrollbar {
-  display: none;
-}
-
 body {
   background-color: hsl(210, 4%, 9%);
   font-family: "Roboto";
@@ -297,6 +306,30 @@ a:hover {
 
 .main > section:nth-child(odd) {
   background-color: hsl(30, 8%, 5%);
+}
+
+input,
+textarea,
+select {
+  width: 100%;
+  padding: 1.3rem;
+  color: #fff;
+  background-color: hsl(210, 4%, 9%);
+  border: 1px solid rgba(170, 170, 170, 0.4392156863);
+  font-size: 1rem;
+}
+input::-moz-placeholder, textarea::-moz-placeholder, select::-moz-placeholder {
+  color: #fff;
+}
+input::placeholder,
+textarea::placeholder,
+select::placeholder {
+  color: #fff;
+}
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: hsl(38, 61%, 73%);
 }
 
 img {

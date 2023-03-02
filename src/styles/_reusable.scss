@@ -98,6 +98,25 @@
     }
 }
 
+.sidesPatterenbg {
+
+    &::before,
+    &::after {
+        width: 15px;
+        height: 100%;
+        background-image: url('../assets/images/sidePattern.png');
+    }
+
+    &::before {
+        left: 0;
+    }
+
+    &::after {
+        right: 0;
+        left: auto;
+    }
+}
+
 .skewShape {
     &::after {
         content: '';

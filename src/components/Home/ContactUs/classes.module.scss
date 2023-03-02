@@ -39,28 +39,28 @@
                 display: grid;
                 gap: 1rem;
 
-                input,
-                textarea,
-                select {
+                // input,
+                // textarea,
+                // select {
 
-                    width: 100%;
-                    padding: 1.3rem;
-                    color: $text-color;
-                    background-color: $body-bg;
-                    border: 1px solid $divide-color;
-                    font-size: 1rem;
+                //     width: 100%;
+                //     padding: 1.3rem;
+                //     color: $text-color;
+                //     background-color: $body-bg;
+                //     border: 1px solid $divide-color;
+                //     font-size: 1rem;
 
-                    &::placeholder {
-                        color: $text-color
-                    }
+                //     &::placeholder {
+                //         color: $text-color
+                //     }
 
-                    &:focus {
-                        border-color: $primary-color
-                    }
+                //     &:focus {
+                //         border-color: $primary-color
+                //     }
 
 
 
-                }
+                // }
 
                 input[type="date"], select {
                   position: relative;
@@ -76,19 +76,6 @@
                 .input_group {
 
                     @include flex(space-between, center, 1rem);
-
-                    .select {
-                        width: 100%;
-                        position: relative;
-
-                        svg {
-                            position: absolute;
-                            top: 50%;
-                            left: 1rem;
-                            transform: translateY(-50%);
-                            z-index: 1;
-                        }
-                    }
 
                 }
 
