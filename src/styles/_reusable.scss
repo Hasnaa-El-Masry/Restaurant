@@ -97,3 +97,18 @@
 
     }
 }
+
+.skewShape {
+    &::after {
+        content: '';
+        position: absolute;
+        left: -100%;
+        right: 50%;
+        width: 140px;
+        min-height: 400px;
+        background: linear-gradient(90deg, hsla(0, 0%, 100%, 0) 0, hsla(0, 0%, 100%, .4));
+        transform: skewX(-25deg);
+        transition: $transition-slow;
+        z-index: 3;
+    }
+}

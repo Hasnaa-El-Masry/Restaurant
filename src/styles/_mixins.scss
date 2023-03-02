@@ -5,3 +5,11 @@
     gap: $gap;
     flex-direction: $direction;
 }
+
+@mixin grid($gap: auto, $grid-template-columns: auto, $justify: auto, $align: auto, ) {
+    display: flex;
+    align-items: $align;
+    justify-content: $justify;
+    gap: $gap;
+    grid-template-columns: $grid-template-columns
+}

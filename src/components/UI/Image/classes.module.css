@@ -9,9 +9,7 @@
 /* =====  Z index  ===== */
 /* ===== Transition  ===== */
 .img_wrapper {
-  width: 100px;
   overflow: hidden;
-  border-radius: 15px;
   position: relative;
   cursor: pointer;
 }

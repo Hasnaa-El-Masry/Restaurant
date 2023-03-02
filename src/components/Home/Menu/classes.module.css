@@ -94,6 +94,9 @@
 .container .menu_items .item .desc p {
   color: #a7a7a7;
 }
+.container .menu_items .img {
+  border-radius: 15px;
+}
 .container .menu_items .img:hover img {
   transform: scale(1.1);
 }

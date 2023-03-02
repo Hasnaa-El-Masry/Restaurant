@@ -32,7 +32,7 @@ const Home = () => {
         <WhyUs/>
         <Team/>
         <Intro/>
-        <section><News/></section>
+        <News/>
       </main>
     </>
   )
