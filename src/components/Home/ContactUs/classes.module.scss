@@ -25,7 +25,7 @@
 
                 span {
                     color: $primary-color;
-                    font-size: $h5-font-size;
+                    font-size: $h5-font-size-lg;
                     margin: 0 .6rem;
                 }
             }
@@ -96,7 +96,7 @@
             row-gap: 1.3rem;
             .number {
                 @include flex(center,center);
-                font-size:$h3-font-size;
+                font-size:$h3-font-size-lg;
                 a{
                     color: $primary-color;
                 }

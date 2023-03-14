@@ -16,7 +16,7 @@
 
                 li {
                     @include flex(center, center, 1rem);
-                    font-size: $h5-font-size;
+                    font-size: $h5-font-size-lg;
                     text-transform: uppercase;
                 }
             }
@@ -67,7 +67,7 @@
                         padding-inline-start: 1rem;
                         color: $primary-color;
                         font-family: $header-font;
-                        font-size: $h5-font-size;
+                        font-size: $h5-font-size-lg;
                     }
 
                 }

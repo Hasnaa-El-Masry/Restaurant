@@ -1,4 +1,5 @@
 @import "../../../styles/variables";
+@import "../../../styles/mediaqueries";
 
 .container {
     text-align: center;
@@ -37,5 +38,22 @@
             line-height: 1.9;
             font-size: $normal-font-size;
         }
+
+        .header_desc {
+            width: 70%;
+            line-height: 1.4;
+            color: $text-color;
+            // font-size: $h5-font-size-sm;
+        }
     }
+}
+
+@include smallDevice {
+    
+    .description {
+        .header_desc {
+            font-size: $h5-font-size-lg !important;
+        }
+    }
+
 }

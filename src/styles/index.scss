@@ -1,5 +1,6 @@
 @import 'main';
 
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -31,27 +32,27 @@ h4,
 h5 {
     font-family: $header-font !important;
     font-weight: $font-light;
-
+    transition: all .4s ease-in-out;
 }
 
 h1 {
-    font-size: $h1-font-size;
+    font-size: $h1-font-size-sm;
 }
 
 h2 {
-    font-size: $h2-font-size;
+    font-size: $h2-font-size-sm;
 }
 
 h3 {
-    font-size: $h3-font-size;
+    font-size: $h3-font-size-sm;
 }
 
 h4 {
-    font-size: $h4-font-size;
+    font-size: $h4-font-size-sm;
 }
 
 h5 {
-    font-size: $h5-font-size;
+    font-size: $h5-font-size-sm;
 }
 
 small {
@@ -63,6 +64,7 @@ p {
     color: $text-color-light;
     font-size: $small-font-size;
     line-height: 1.8;
+    transition: $transition-fast;
 }
 
 a {
@@ -101,32 +103,6 @@ select {
     }
 }
 
-// @include tablet {
-//     $h1-font-size: 5rem;
-//     $h2-font-size: 2.75rem;
-//     $h3-font-size: 2rem;
-
-//     $normal-font-size: 1rem;
-//     $small-font-size: .875rem;
-//     $smaller-font-size: .813rem;
-
-//     h1 {
-//          font-size: $biggest-font-size;
-//     }
-
-//     h2 {
-//         font-size: $h2-font-size;
-//     }
-
-//     h3 {
-//         font-size: $h3-font-size;
-//     }
-
-//     p{
-//         font-size: $normal-font-size;
-//     }
-// }
-
 img {
     display: block;
     width: 100%;
@@ -136,4 +112,38 @@ img {
 // Swiper style modefiying
 .swiper-pagination-bullet-active {
     background-color: $primary-color;
+}
+
+
+
+@include smallDevice {
+
+    h1 {
+        font-size: $h1-font-size-md;
+    }
+
+    h2 {
+        font-size: $h2-font-size-md;
+    }
+
+    h3 {
+        font-size: $h3-font-size-md;
+    }
+
+}
+
+@include tablet {
+
+    h1 {
+        font-size: $h1-font-size-lg;
+    }
+
+    h2 {
+        font-size: $h2-font-size-lg;
+    }
+
+    h3 {
+        font-size: $h3-font-size-lg;
+    }
+
 }

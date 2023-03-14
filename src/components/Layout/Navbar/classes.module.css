@@ -88,6 +88,10 @@
   transform: translateY(-2.5rem);
 }
 
+.hide {
+  transform: translateY(-8.5rem);
+}
+
 .scroll_bg {
   background-color: hsl(0, 0%, 13%);
 }

@@ -8,6 +8,10 @@
 /* =====  Margins  ===== */
 /* =====  Z index  ===== */
 /* ===== Transition  ===== */
+/* ======= MEDIA QURIES ======== */
+/* for small devices */
+/* for medium devices */
+/* for large devices */
 .container {
   text-align: center;
   margin-bottom: 3rem;
@@ -35,4 +39,15 @@
   margin: auto;
   line-height: 1.9;
   font-size: 0.938rem;
+}
+.container .description .header_desc {
+  width: 70%;
+  line-height: 1.4;
+  color: #fff;
+}
+
+@media screen and (min-width: 576px) {
+  .description .header_desc {
+    font-size: 1.3rem !important;
+  }
 }

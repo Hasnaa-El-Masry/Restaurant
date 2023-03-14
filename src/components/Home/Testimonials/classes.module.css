@@ -28,7 +28,7 @@
   row-gap: 2rem;
   text-align: center;
 }
-.testimonials .container .slide .quote_container quote {
+.testimonials .container .slide .quote_container q {
   font-size: 3rem;
   display: block;
   font-family: "Forum", cursive;
