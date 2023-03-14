@@ -130,6 +130,14 @@ img {
         font-size: $h3-font-size-md;
     }
 
+    h4 {
+        font-size: $h4-font-size-md;
+    }
+
+    h5 {
+        font-size: $h5-font-size-md;
+    }
+
 }
 
 @include tablet {

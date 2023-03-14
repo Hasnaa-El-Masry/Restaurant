@@ -139,6 +139,10 @@
   z-index: 3;
 }
 
+/* ======= MEDIA QURIES ======== */
+/* for small devices */
+/* for medium devices */
+/* for large devices */
 .special_offer {
   padding-left: 15px;
   padding-right: 15px;
@@ -160,7 +164,7 @@
   transform: scale(1.1);
 }
 .special_offer .slider {
-  padding: 3rem 0;
+  padding: 1rem 0;
 }
 .special_offer .slide .slide_item {
   display: grid;
@@ -178,4 +182,10 @@
   align-items: center;
   justify-content: center;
   margin-top: 1rem;
+}
+
+@media screen and (min-width: 967px) {
+  .slider {
+    padding: 3rem 0 !important;
+  }
 }

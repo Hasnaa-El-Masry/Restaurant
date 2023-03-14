@@ -30,7 +30,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Forum&family=Gloock&family=Lora&family=Raleway&family=Space+Mono&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap");
 section {
-  padding: 8rem 1rem;
+  padding: 2.5rem 0.3rem;
 }
 
 /* ======= Layout ======== */
@@ -44,9 +44,17 @@ section {
     max-width: 90%;
   }
 }
+@media screen and (min-width: 576px) {
+  .container {
+    max-width: 86%;
+  }
+}
 @media screen and (min-width: 967px) {
   .container {
     max-width: 86%;
+  }
+  section {
+    padding: 8rem 1rem;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -354,6 +362,12 @@ img {
   }
   h3 {
     font-size: 1.5rem;
+  }
+  h4 {
+    font-size: 1.1rem;
+  }
+  h5 {
+    font-size: 1rem;
   }
 }
 @media screen and (min-width: 967px) {

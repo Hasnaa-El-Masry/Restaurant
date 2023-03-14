@@ -21,9 +21,20 @@ section {
 
 }
 
+@include smallDevice {
+    .container {
+        max-width: $container-width-md ;
+    }
+
+}
+
 @include tablet {
     .container {
         max-width: $container-width-md ;
+    }
+
+    section {
+        padding: $section-padding-lg;
     }
 }
 

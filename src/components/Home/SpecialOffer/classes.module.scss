@@ -1,5 +1,6 @@
 @import '../../../styles/variables';
 @import '../../../styles/reusable';
+@import '../../../styles/mediaqueries';
 
 .special_offer {
     padding-left: 15px;
@@ -34,7 +35,7 @@
     }
 
     .slider {
-        padding: 3rem 0;
+        padding: 1rem 0;
     }
 
     .slide{
@@ -61,5 +62,14 @@
         justify-content: center;
         margin-top: 1rem;
     }
+
+}
+
+@include tablet {
+
+    .slider {
+        padding: 3rem 0 !important;
+    }
+
 
 }
