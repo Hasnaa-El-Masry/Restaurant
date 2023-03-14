@@ -22,11 +22,11 @@ const Home = () => {
         <Header />
       </header>
       <main className='main'>
-        <Offers/>
-        <Story/>
-        <SpecialDish/>
-        {/* <Menu/>
-        <SpecialOffer/>
+        <Offers />
+        <Story />
+        <SpecialDish />
+        <Menu />
+        {/* <SpecialOffer/>
         <Testimonials/>
         <ContactUs/>
         <WhyUs/>

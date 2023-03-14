@@ -10,18 +10,6 @@ import { Link } from 'react-router-dom';
 import Image from '../../UI/Image';
 
 const tabs = ['Morning', 'WEEKDAY', 'LUNCH', 'DINNER'];
-const dishes = [
-  {
-    title: 'Greek Salad',
-    price: '25.20',
-    desc: 'Tomatoes, green bell pepper, sliced cucumber onion, olives, and feta cheese.'
-  },
-  {
-    title: 'Greek Salad',
-    price: '25.20',
-    desc: 'Tomatoes, green bell pepper, sliced cucumber onion, olives, and feta cheese.'
-  }
-]
 
 const Menu = () => {
 
@@ -48,7 +36,7 @@ const Menu = () => {
             <ul>
               {tabs.map((tab, indx) => (
                 <li key={indx} className='title'>
-                  <TbSquareRotated className='icon' />
+                  <TbSquareRotated className={`icon ${classes.icon}`}/>
                   <span onClick={() => changeActiveHandler(indx)} className={active === indx ? 'active' : ''}>{tab}</span>
                 </li>
               ))}
@@ -119,7 +107,7 @@ const Menu = () => {
 
             </div>
 
-            <div className="divider"></div>
+            <div className={` divider ${classes.show}`}></div>
 
             <div className={classes.col}>
 
