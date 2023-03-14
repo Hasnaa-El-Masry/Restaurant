@@ -27,7 +27,7 @@
   margin-bottom: 3rem;
 }
 .container .form_container .header p {
-  font-size: 0.938rem;
+  font-size: 1rem;
   color: #fff;
 }
 .container .form_container .header p span {
@@ -90,5 +90,5 @@
 .container .location .address ul li p {
   width: 50%;
   margin: 0.5rem auto;
-  font-size: 0.938rem;
+  font-size: 1rem;
 }

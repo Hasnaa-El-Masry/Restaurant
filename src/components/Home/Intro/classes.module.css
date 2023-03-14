@@ -202,7 +202,7 @@
 }
 .intro .container .content span {
   color: hsl(38, 61%, 73%);
-  font-size: 0.938rem;
+  font-size: 1rem;
   letter-spacing: 0.2rem;
 }
 .intro .container .fact_counter {
@@ -246,7 +246,7 @@
   color: hsl(38, 61%, 73%);
   letter-spacing: 0.2rem;
   line-height: 1.7;
-  font-size: 0.938rem;
+  font-size: 1rem;
 }
 
 @keyframes borderWidth {

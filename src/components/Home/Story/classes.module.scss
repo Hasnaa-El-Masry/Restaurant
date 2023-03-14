@@ -42,7 +42,7 @@
             }
 
             .layer_img {
-                width: 270px;
+                width: 200px;
                 position: relative;
                 left: 25%;
 
@@ -59,7 +59,7 @@
                 &::before {
                     content: '';
                     width: 140px;
-                    min-height: 400px;
+                    min-height: 250px;
                     transform: translateY(-50%) translateX(-50%) scaleX(1);
                     background-image: url('../../../assets/images/shape.png');
                     transition: $transition-slow;
@@ -104,5 +104,23 @@
 @include largeDevice {
     .container {
         grid-template-columns: 40% 60% !important;
+
+
+        .image {
+            &>img {
+                width: 80%;
+                margin-inline-start: auto;
+            }
+
+            .layer_img {
+                width: 270px;
+
+                &::before {
+                    content: '';
+                    min-height: 400px;
+                }
+
+            }
+        }
     }
 }

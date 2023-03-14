@@ -199,7 +199,7 @@
 }
 .footer .content .address_info p {
   margin: 0.4rem;
-  font-size: 0.938rem;
+  font-size: 1rem;
 }
 .footer .content .address_info .action {
   display: flex;
@@ -218,7 +218,7 @@
   justify-content: center;
   gap: auto;
   flex-direction: auto;
-  font-size: 0.938rem;
+  font-size: 1rem;
 }
 .footer .copy p span a {
   color: hsl(38, 61%, 73%);

@@ -37,24 +37,24 @@ const SectionHeader = ({ subtitle, title, description, className }) => {
     )
 }
 
-export const SectionHeaderContent = ({ header, isActive, subtitle, title, description, className }) => {
+export const SectionHeaderContent = ({ header, subtitle, title, description, className }) => {
 
     return (
         <div className={`${classes.container} ${className ? className : ''}`}>
 
-            <MotionWrapper isActive classes={classes.subtitle} delay={.1}>
+            <MotionWrapper classes={classes.subtitle} delay={.1}>
 
                 {subtitle}
 
             </MotionWrapper>
 
-            <MotionWrapper isActive classes={classes.pattern_img} delay={.1}>
+            <MotionWrapper  classes={classes.pattern_img} delay={.1}>
 
                 <img src={pattern_img} alt="" />
 
             </MotionWrapper>
 
-            <MotionWrapper isActive classes={classes.title} delay={1}>
+            <MotionWrapper  classes={classes.title} delay={1}>
                 {header ?
                     <h1>{title}</h1> :
                     <h2>{title}</h2>

@@ -1,9 +1,9 @@
 @import '../../../styles/variables';
+@import '../../../styles/mediaqueries';
 
 .special_dish {
     padding: 0;
     display: grid;
-    grid-template-columns: 1fr 1fr;
 
     .img {
         img {
@@ -13,31 +13,21 @@
 
     .content {
         padding: $section-padding;
+        text-align: center;
 
-        &__container {
-            padding: 2rem;
-            display: grid;
-            gap: 3rem;
-            grid-template-columns: 5% 1fr;
+        img {
+            margin-inline-end: auto;
+            margin-inline-start: auto;
+        }
+
+        p {
+            width: auto !important;
         }
 
         .icon {
             font-size: 2.5rem;
             transform: translateY(5%);
             animation: moveUpDown 2s ease-in-out infinite alternate-reverse;
-        }
-
-        .header {
-            text-align: left;
-
-            img,
-            p {
-                margin-inline-start: 0;
-            }
-
-            p {
-                width: 80%;
-            }
         }
 
         .price {
@@ -72,3 +62,103 @@
 
     }
 }
+
+@include smallDevice {
+
+    .content {
+        text-align: start !important;
+
+        .header {
+            text-align: start;
+
+            img {
+                margin-inline-start: 0;
+            }
+
+        }
+
+
+    }
+
+    .content__container {
+        padding: 2rem;
+        display: grid;
+        gap: 3rem;
+        grid-template-columns: 2% 1fr;
+    }
+
+}
+
+@include largeDevice {
+
+    .special_dish {
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+
+// .special_dish {
+//     padding: 0;
+//     display: grid;
+
+//     .img {
+//         img {
+//             height: 100%;
+//         }
+//     }
+
+//     .content {
+//         padding: $section-padding;
+
+//         p {
+//             width: auto !important;
+//         }
+
+//         &__container {
+//             // padding: 2rem;
+//             display: grid;
+//             gap: 3rem;
+//             grid-template-columns: 2% 1fr;
+//         }
+
+//         .icon {
+//             font-size: 2.5rem;
+//             transform: translateY(5%);
+//             animation: moveUpDown 2s ease-in-out infinite alternate-reverse;
+//         }
+
+//         .header {
+//             text-align: left;
+
+//             img,
+//             p {
+//                 margin-inline-start: 0;
+//             }
+
+//             p {
+//                 width: 80%;
+//             }
+//         }
+
+//         .price {
+//             margin: 3rem 0;
+
+//             .old {
+//                 color: $muted-text-color;
+//                 font-size: 1rem;
+//                 margin-inline-end: 2rem;
+//             }
+
+//             .new {
+//                 color: $primary-color;
+//                 font-size: 1.6rem;
+//                 margin-inline-end: 2rem;
+//             }
+
+//             .actions {
+//                 text-transform: capitalize;
+//             }
+//         }
+//     }
+// }

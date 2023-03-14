@@ -38,7 +38,7 @@
   width: auto;
   margin: auto;
   line-height: 1.9;
-  font-size: 0.938rem;
+  font-size: 1rem;
   color: #fff;
 }
 .container .description .header_desc {
@@ -48,7 +48,7 @@
 
 @media screen and (min-width: 576px) {
   .description p {
-    width: 50% !important;
+    width: 60% !important;
   }
   .description .header_desc {
     font-size: 1.3rem !important;

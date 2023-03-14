@@ -25,14 +25,14 @@ const Home = () => {
         <Offers/>
         <Story/>
         <SpecialDish/>
-        <Menu/>
+        {/* <Menu/>
         <SpecialOffer/>
         <Testimonials/>
         <ContactUs/>
         <WhyUs/>
         <Team/>
         <Intro/>
-        <News/>
+        <News/> */}
       </main>
     </>
   )
