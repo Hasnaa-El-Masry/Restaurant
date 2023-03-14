@@ -1,25 +1,13 @@
 @import '../../../styles/variables';
 @import '../../../styles/animation';
+@import '../../../styles/mediaqueries';
 @import '../../../styles/reusable';
 
 .offers {
-    min-height: 120vh;
-
-    .container {
-        position: absolute;
-        z-index: 1;
-        left: 50%;
-        transform: translate(-50%);
-    }
-
-    .header {
-        grid-column: 1/6;
-    }
 
     .items {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        gap: 8rem;
+        gap: 6rem;
     }
 
     .offer__item {
@@ -72,9 +60,46 @@
 
     }
 
+}
+
+.show {
+    display: none;
+}
+
+@include tablet {
+
+    .items {
+        grid-template-columns: 1fr 1fr;
+        justify-content: center;
+        align-items: center;
+    }
+
+}
+
+@include largeDevice {
+
+    .offers {
+        min-height: 120vh;
+    }
+
+    .container {
+        position: absolute;
+        z-index: 1;
+        left: 50%;
+        transform: translate(-50%);
+    }
+
+    .header {
+        grid-column: 1/6;
+    }
+
+    .items {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
     .offer__item:nth-child(1),
     .offer__item:nth-child(3) {
         transform: translateY(-40%);
     }
-}
 
+}

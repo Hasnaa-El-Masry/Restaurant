@@ -35,7 +35,7 @@
 }
 .container .description p {
   font-size: 1.2rem;
-  width: 35%;
+  width: auto;
   margin: auto;
   line-height: 1.9;
   font-size: 0.938rem;
@@ -47,7 +47,15 @@
 }
 
 @media screen and (min-width: 576px) {
+  .description p {
+    width: 50% !important;
+  }
   .description .header_desc {
     font-size: 1.3rem !important;
+  }
+}
+@media screen and (min-width: 967px) {
+  .description p {
+    width: 35% !important;
   }
 }

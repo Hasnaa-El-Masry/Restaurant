@@ -24,6 +24,10 @@
 /* =====  Margins  ===== */
 /* =====  Z index  ===== */
 /* ===== Transition  ===== */
+/* ======= MEDIA QURIES ======== */
+/* for small devices */
+/* for medium devices */
+/* for large devices */
 .animated_bg {
   position: relative;
   overflow: hidden;
@@ -74,4 +78,10 @@
   right: -60%;
   background-image: url("../../../assets/images/rightBg.png") !important;
   animation: moveUpDownBottom 5s ease-in-out infinite alternate-reverse;
+}
+
+@media screen and (max-width: 575px) {
+  .animated_bg::before, .animated_bg::after {
+    display: none;
+  }
 }

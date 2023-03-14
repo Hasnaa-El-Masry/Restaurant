@@ -33,7 +33,7 @@
 
         p {
             font-size: 1.2rem;
-            width: 35%;
+            width: auto;
             margin: auto;
             line-height: 1.9;
             font-size: $normal-font-size;
@@ -43,17 +43,34 @@
             width: 70%;
             line-height: 1.4;
             color: $text-color;
-            // font-size: $h5-font-size-sm;
         }
     }
 }
 
 @include smallDevice {
-    
+
     .description {
+
+        p {
+            width: 50% !important;
+        }
+
         .header_desc {
             font-size: $h5-font-size-lg !important;
         }
+    }
+
+}
+
+@include tablet {
+
+    .description {
+
+        p {
+            width: 35% !important;
+        }
+
+
     }
 
 }

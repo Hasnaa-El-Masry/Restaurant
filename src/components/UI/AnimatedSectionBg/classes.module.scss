@@ -1,5 +1,6 @@
 @import '../../../styles/animation';
 @import '../../../styles/variables';
+@import '../../../styles/mediaqueries';
 
 .animated_bg {
 
@@ -36,7 +37,7 @@
     }
 
     100% {
-        top:0%
+        top: 0%
     }
 }
 
@@ -65,4 +66,15 @@
         animation: moveUpDownBottom 5s ease-in-out infinite alternate-reverse;
     }
 
+}
+
+@include smallerDevice {
+    .animated_bg {
+
+        &::before,
+        &::after {
+            display: none;
+        }
+
+    }
 }

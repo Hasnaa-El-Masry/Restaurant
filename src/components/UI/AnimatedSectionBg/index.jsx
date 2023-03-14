@@ -1,8 +1,8 @@
 import classes from './classes.module.scss'
 
-const AnimatedSectionBg = ({children, styles}) => {
+const AnimatedSectionBg = ({ children, styles }) => {
   return (
-    <section className={`${classes.animated_bg} ${styles === 'topLeft' ? classes.topLeft: ''}`}>{children}</section>
+    <section className={`${classes.animated_bg} ${styles === 'topLeft' ? classes.topLeft : ''}`}>{children}</section>
   )
 }
 
