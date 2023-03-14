@@ -1,8 +1,7 @@
 import React from 'react'
-import classes from './classes.module.scss'
 
 import ContactUs from './ContactUs'
-import Header from './Header'
+import Header from '../Header'
 import Intro from './Intro'
 import Menu from './Menu'
 import News from './News'

@@ -73,6 +73,10 @@
     transform: translateY(-$nav-top-height);
 }
 
+.hide {
+    transform: translateY(-($nav-bottom-height + $nav-top-height) );
+}
+
 .scroll_bg {
     background-color: $nav-scroll-bg;
 }

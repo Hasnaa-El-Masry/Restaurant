@@ -1,11 +1,11 @@
 import classes from './classes.module.scss';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-import slider1 from "../../../assets/images/slider-1.jpg";
-import slider2 from "../../../assets/images/slider-2.jpg";
-import slider3 from "../../../assets/images/slider-3.jpg";
-import Button from "../../UI/Button";
-import SectionHeader from '../../UI/SectionHeader';
+import slider1 from "../../assets/images/slider-1.jpg";
+import slider2 from "../../assets/images/slider-2.jpg";
+import slider3 from "../../assets/images/slider-3.jpg";
+import Button from "../UI/Button";
+import SectionHeader from '../UI/SectionHeader';
 
 const Header = () => {
 

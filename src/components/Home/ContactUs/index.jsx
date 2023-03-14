@@ -32,7 +32,7 @@ const ContactUs = () => {
                 <IconInput
                   icon={({ className }) => <AiOutlineUser className={className} />}
                   input={({ className }) =>
-                    <select value='1' className={className}>
+                    <select defaultValue='1' className={className}>
                       <option value="1">1 person</option>
                       <option value="2">2 person</option>
                       <option value="3">3 person</option>
@@ -49,7 +49,7 @@ const ContactUs = () => {
                 <IconInput
                   icon={({ className }) => <BsClockFill className={className} />}
                   input={({ className }) =>
-                    <select value='' className={className}>
+                    <select defaultValue='' className={className}>
                       <option value="">8:00 am</option>
                       <option value="">9:00 am</option>
                       <option value="">10:00 am</option>

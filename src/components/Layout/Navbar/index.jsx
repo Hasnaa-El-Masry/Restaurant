@@ -16,7 +16,20 @@ const Navbar = () => {
 
     const navigate = useNavigate()
     const [isScrolled, setIsScrolled] = useState(false);
+    const [scroll, setScroll] = useState({
+        direction: 'down',
+        scrollY: 0
+    });
+
     const changeScrollHandler = () => {
+
+        setScroll((crru) => {
+            return {
+                direction: crru.scrollY < window.scrollY ? 'down' : 'up',
+                scrollY: window.scrollY
+            }
+        })
+
         if (window.scrollY > 0) {
             setIsScrolled(true);
         } else {
@@ -25,11 +38,11 @@ const Navbar = () => {
     }
 
     useEffect(() => {
-        window.addEventListener('scroll', changeScrollHandler)
+        window.addEventListener('scroll', changeScrollHandler);
     }, [])
 
     return (
-        <nav className={`${classes.nav} ${isScrolled ? classes.hide_nav_top : ''}`}>
+        <nav className={`${classes.nav} ${isScrolled ? classes.hide_nav_top : ''} ${(scroll.scrollY > 900 && scroll.direction == 'down') ? classes.hide : classes.show}`}>
             <div className={`${classes.nav__top}`}>
                 <div className={classes.address}>
                     <ul>
@@ -56,8 +69,8 @@ const Navbar = () => {
                             <Link><img src={logo} /></Link>
                         </div>
                         <div className={classes.action}>
-                            <Button variant='primary' onClick={()=>navigate('')}>find a table</Button>
-                        </div> 
+                            <Button variant='primary' onClick={() => navigate('')}>find a table</Button>
+                        </div>
                     </div>
                 </Container>
             </div>
