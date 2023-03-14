@@ -37,12 +37,13 @@
             margin: auto;
             line-height: 1.9;
             font-size: $normal-font-size;
+            color: $text-color;
+
         }
 
         .header_desc {
             width: 70%;
             line-height: 1.4;
-            color: $text-color;
         }
     }
 }
@@ -69,7 +70,6 @@
         p {
             width: 35% !important;
         }
-
 
     }
 

@@ -39,11 +39,11 @@
   margin: auto;
   line-height: 1.9;
   font-size: 0.938rem;
+  color: #fff;
 }
 .container .description .header_desc {
   width: 70%;
   line-height: 1.4;
-  color: #fff;
 }
 
 @media screen and (min-width: 576px) {

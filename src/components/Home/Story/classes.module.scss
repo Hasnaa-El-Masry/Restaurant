@@ -1,20 +1,23 @@
 @import '../../../styles/variables';
+@import '../../../styles/mediaqueries';
 
 .story {
     position: relative;
 
     .container {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        // grid-template-columns: 40% 60%;
         gap: 2rem;
+        row-gap: 6rem;
         padding-bottom: 5rem;
 
         .content {
             text-align: center;
 
             .title {
+
                 p {
-                    width: 70%;
+                    width: 80% !important;
                 }
             }
 
@@ -33,9 +36,15 @@
         }
 
         .image {
+            &>img {
+                width: 80%;
+                margin-inline-start: auto;
+            }
+
             .layer_img {
                 width: 270px;
                 position: relative;
+                left: 25%;
 
                 &::before,
                 img {
@@ -50,7 +59,7 @@
                 &::before {
                     content: '';
                     width: 140px;
-                    min-height: 300px;
+                    min-height: 400px;
                     transform: translateY(-50%) translateX(-50%) scaleX(1);
                     background-image: url('../../../assets/images/shape.png');
                     transition: $transition-slow;
@@ -73,8 +82,8 @@
                 position: absolute;
                 right: 0;
                 top: 0;
-                transform-origin:center;
-                animation:rotate 15s linear infinite normal ;
+                transform-origin: center;
+                animation: rotate 15s linear infinite normal;
             }
         }
     }
@@ -85,7 +94,15 @@
     0% {
         transform: rotate(0deg);
     }
+
     100% {
         transform: rotate(360deg);
+    }
+}
+
+
+@include largeDevice {
+    .container {
+        grid-template-columns: 40% 60% !important;
     }
 }
