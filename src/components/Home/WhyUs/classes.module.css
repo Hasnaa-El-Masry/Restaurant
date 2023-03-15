@@ -8,13 +8,17 @@
 /* =====  Margins  ===== */
 /* =====  Z index  ===== */
 /* ===== Transition  ===== */
+/* ======= MEDIA QURIES ======== */
+/* for small devices */
+/* for medium devices */
+/* for large devices */
 .whyus {
   padding-top: 0;
 }
 
 .content {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: 3rem;
 }
 .content > .item:nth-child(even) {
@@ -44,5 +48,15 @@
   }
   100% {
     transform: rotate(360deg) scale(1);
+  }
+}
+@media screen and (min-width: 768px) {
+  .content {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .content {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 }

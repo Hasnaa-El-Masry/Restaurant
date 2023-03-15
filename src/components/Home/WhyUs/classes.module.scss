@@ -1,4 +1,6 @@
 @import '../../../styles/variables';
+@import '../../../styles/mediaqueries';
+
 
 .whyus{
     padding-top: 0;
@@ -6,7 +8,7 @@
 
 .content {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: 3rem;
 
     &>.item:nth-child(even) {
@@ -49,5 +51,17 @@
 
     100% {
         transform: rotate(360deg) scale(1);
+    }
+}
+
+@include mobile {
+    .content {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@include largeDevice {
+    .content {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
     }
 }
