@@ -2,22 +2,22 @@
 @import '../../../styles/mixins';
 @import '../../../styles/reusable';
 @import '../../../styles/animation';
+@import '../../../styles/mediaqueries';
 
 .news {
 
     .news {
 
-        @include grid(2.5rem, 1fr 1fr 1fr, space-between);
-
+        @include grid(2.5rem, 1fr, space-between);
 
         .new {
             background-color: #fff;
             width: 100%;
-           overflow: hidden;
+            overflow: hidden;
             position: relative;
 
             @extend .skewShape;
-            
+
             &::after {
                 top: 0;
                 height: 100%;
@@ -35,7 +35,8 @@
 
             .img {
                 overflow: hidden;
-                img{
+
+                img {
                     transition: $transition-fast;
                 }
             }
@@ -80,5 +81,27 @@
     .action {
         margin-top: 4rem;
         text-align: center;
+    }
+}
+
+
+@include mobile {
+    .news {
+
+        .news {
+
+            grid-template-columns: 1fr 1fr;
+
+        }
+    }
+}
+
+
+@include tablet {
+    .news {
+
+        .news {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
     }
 }
