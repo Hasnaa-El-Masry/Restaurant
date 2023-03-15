@@ -1,27 +1,37 @@
 @import '../../../styles/mixins';
 @import '../../../styles/variables';
 @import '../../../styles/reusable';
+@import '../../../styles/mediaqueries';
 
 .footer {
 
     background: linear-gradient(90deg, hsla(0, 0%, 0%, 0.9) 0, hsla(0, 0%, 0%, .4)),
         url('../../../assets/images/footer-bg.jpg');
+    background-position: right;
     background-size: cover;
-    min-height: 100vh;
     text-align: center;
     padding: 5rem 0;
 
     .container {
-        @include grid (3rem, 1fr );
-
+        @include grid (3rem, 1fr);
     }
 
     .content {
-        @include grid (auto, 1fr 2fr 1fr, space-between, center);
+        @include grid (3rem, 1fr, space-between, center);
+
+        .pages {
+            order: 2;
+        }
+
+        .social {
+            order: 3;
+        }
+
+        .address_info {
+            order: 1;
+        }
 
         ul {
-
-            margin-bottom: 7rem;
 
             li {
                 @include flex (center, center, 1.5rem, column);
@@ -37,18 +47,17 @@
 
         }
 
-
         .address_info {
             background-image: url('../../../assets/images/footer-bg-pattern.png');
             @include grid (1rem, 1fr, space-between, center);
             background-color: $container-bg;
-            padding: 7rem 5rem;
+            padding: 4rem 2rem;
 
             @extend .relative;
             @extend .sidesPatterenbg;
 
             .logo {
-                margin-bottom: 2rem;
+                margin-bottom: 1rem;
 
                 img {
                     width: 30%;
@@ -62,20 +71,17 @@
 
             p {
                 margin: .4rem;
-                font-size: $normal-font-size;
+                font-size: $small-font-size;
             }
 
             .action {
                 @include flex(center, stretch);
-                // background-color: red;
 
                 .btn {
                     padding: 1.5rem 3rem;
                     width: 30%;
                 }
             }
-
-            ;
 
         }
 
@@ -84,8 +90,8 @@
     .copy {
 
         p {
-            @include flex (center, center);
-            font-size: $normal-font-size;
+            @include flex (center, center, 1rem, column);
+            font-size: $small-font-size;
 
             span {
                 a {
@@ -94,5 +100,47 @@
             }
         }
 
+    }
+}
+
+@include tablet {
+    .footer {
+
+        .content {
+            @include grid (auto, 1fr 2fr 1fr, space-between, center);
+
+            .pages, .social, .address_info {
+                order: initial;
+            }
+
+            ul {
+
+                margin-bottom: 7rem;
+            }
+
+
+            .address_info {
+                padding: 7rem 5rem;
+
+                .logo {
+                    margin-bottom: 2rem;
+                }
+
+                p {
+                    font-size: $normal-font-size;
+                }
+
+            }
+
+        }
+
+        .copy {
+
+            p {
+                @include flex (center, center);
+                font-size: $normal-font-size;
+            }
+
+        }
     }
 }
