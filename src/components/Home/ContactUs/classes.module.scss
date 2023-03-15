@@ -1,4 +1,5 @@
 @import '../../../styles/variables';
+@import '../../../styles/mediaqueries';
 @import '../../../styles/mixins';
 
 .contact {
@@ -8,7 +9,6 @@
 
 .container {
     display: grid;
-    grid-template-columns: 2fr 1fr;
     background-color: $container-bg;
     transform: translateY(-30%);
 
@@ -17,7 +17,7 @@
         padding: 4rem 1rem;
 
         .header {
-            margin-bottom: 3rem;
+            margin-bottom: 2rem;
 
             p {
                 font-size: $normal-font-size;
@@ -25,46 +25,19 @@
 
                 span {
                     color: $primary-color;
-                    font-size: $h5-font-size-lg;
+                    font-size: $h5-font-size-sm;
                     margin: 0 .6rem;
                 }
             }
         }
 
         .form {
-            padding: 0 3rem;
-
             form {
 
-                display: grid;
-                gap: 1rem;
-
-                // input,
-                // textarea,
-                // select {
-
-                //     width: 100%;
-                //     padding: 1.3rem;
-                //     color: $text-color;
-                //     background-color: $body-bg;
-                //     border: 1px solid $divide-color;
-                //     font-size: 1rem;
-
-                //     &::placeholder {
-                //         color: $text-color
-                //     }
-
-                //     &:focus {
-                //         border-color: $primary-color
-                //     }
-
-
-
-                // }
-
-                input[type="date"], select {
-                  position: relative;
-                  padding-inline-start: 3rem;
+                input[type="date"],
+                select {
+                    position: relative;
+                    padding-inline-start: 3rem;
                 }
 
                 input[type="date"]::-webkit-calendar-picker-indicator {
@@ -72,11 +45,11 @@
                     left: 1rem;
                     filter: invert(1);
                 }
-                
-                .input_group {
 
-                    @include flex(space-between, center, 1rem);
-
+                input,
+                select,
+                textarea {
+                    margin-bottom: 1rem;
                 }
 
             }
@@ -88,19 +61,22 @@
     .location {
         padding: 4rem 1rem;
         text-align: center;
-        background-image: url('../../../assets/images/address-pattern.png') ;
+        background-image: url('../../../assets/images/address-pattern.png');
 
         .header {
             margin-bottom: 2rem;
             display: grid;
             row-gap: 1.3rem;
+
             .number {
-                @include flex(center,center);
-                font-size:$h3-font-size-lg;
-                a{
+                @include flex(center, center);
+                font-size: $h3-font-size-lg;
+
+                a {
                     color: $primary-color;
                 }
             }
+
             svg {
                 margin: auto;
             }
@@ -117,9 +93,54 @@
                         margin: .5rem auto;
                         font-size: $normal-font-size
                     }
-                };
+                }
+
+                ;
             }
         }
 
     }
+}
+
+@include mobile {
+
+    .input_group:first-child {
+
+        @include grid(1rem, 1fr 1fr);
+
+    }
+
+}
+
+@include tablet {
+
+    .input_group:nth-child(2) {
+
+        @include grid(1rem, 2fr 1fr);
+
+    }
+
+}
+
+@include largeDevice {
+
+    .container {
+        grid-template-columns: 2fr 1fr;
+
+        .form_container {
+
+            .header {
+                margin-bottom: 3rem;
+    
+                span {
+                    font-size: $h5-font-size-lg !important;
+                }
+            }
+        }
+    
+        .form {
+            padding: 0 3rem;
+        }
+    }
+    
 }

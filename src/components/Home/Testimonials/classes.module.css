@@ -18,6 +18,7 @@
   padding-bottom: 2rem;
 }
 .testimonials .container {
+  min-height: 120vh;
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../../../assets/images/testimonials-bg.jpg");
   background-size: cover;
 }
@@ -42,6 +43,9 @@
 }
 
 @media screen and (min-width: 768px) {
+  .container {
+    min-height: 70vh !important;
+  }
   .slide {
     min-height: 50vh !important;
   }
@@ -50,6 +54,9 @@
   }
 }
 @media screen and (min-width: 967px) {
+  .container {
+    min-height: 140vh;
+  }
   .slide {
     min-height: 80vh !important;
   }
@@ -64,6 +71,6 @@
     min-height: 100vh !important;
   }
   .slide .quote_container q {
-    font-size: 3rem !important;
+    font-size: 2rem !important;
   }
 }

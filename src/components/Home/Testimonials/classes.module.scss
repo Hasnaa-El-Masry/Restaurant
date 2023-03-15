@@ -1,46 +1,6 @@
 @import '../../../styles/variables';
 @import '../../../styles/mediaqueries';
 
-// .testimonials {
-
-//     padding-left: 0;
-//     padding-right: 0;
-//     padding-bottom: 0;
-
-//     .container {
-
-//         background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url('../../../assets/images/testimonials-bg.jpg');
-//         background-size: cover;
-//         min-height: 140vh;
-
-//         .slide {
-//             padding: 5rem 0;
-//             min-height: 100vh;
-//             width: 75%;
-
-//             .quote_container {
-//                 display: grid;
-//                 row-gap: 2rem;
-//                 text-align: center;
-
-//                 q {
-//                     font-size: $h2-font-size-lg;
-//                     display: block;
-//                     font-family: $header-font;
-//                     line-height: 1.6;
-//                 }
-
-//                 .quote_mark {
-//                     font-size: 2rem;
-//                     margin: auto;
-//                 }
-//             }
-//         }
-//     }
-
-// }
-
-
 .testimonials {
 
     padding-left: 0;
@@ -49,6 +9,7 @@
 
     .container {
 
+        min-height: 120vh;
         background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url('../../../assets/images/testimonials-bg.jpg');
         background-size: cover;
 
@@ -61,7 +22,7 @@
                 text-align: center;
 
                 q {
-                    margin-bottom:2rem ;
+                    margin-bottom: 2rem;
                     font-size: $h2-font-size-sm;
                     display: block;
                     font-family: $header-font;
@@ -80,6 +41,10 @@
 
 @include mobile {
 
+    .container {
+        min-height: 70vh !important;
+    }
+
     .slide {
         min-height: 50vh !important;
 
@@ -94,12 +59,16 @@
 }
 
 @include tablet {
-    
+
+    .container {
+        min-height: 140vh;
+    }
+
     .slide {
         min-height: 80vh !important;
 
         .quote_container {
-            
+
             q {
                 width: 70%;
                 margin: auto;
@@ -111,14 +80,14 @@
 }
 
 @include largeDevice {
-    
+
     .slide {
         min-height: 100vh !important;
 
         .quote_container {
-            
+
             q {
-                font-size: $h2-font-size-lg !important;
+                font-size: $h2-font-size-md !important;
             }
         }
     }

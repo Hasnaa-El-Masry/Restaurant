@@ -22,6 +22,7 @@ const ContactUs = () => {
 
           <div className={classes.form}>
             <form>
+              
               <div className={classes.input_group}>
                 <input type="text" placeholder='Your Name' />
                 <input type="text" placeholder='Your Phone' />
@@ -29,24 +30,31 @@ const ContactUs = () => {
 
               <div className={classes.input_group}>
 
-                <IconInput
-                  icon={({ className }) => <AiOutlineUser className={className} />}
-                  input={({ className }) =>
-                    <select defaultValue='1' className={className}>
-                      <option value="1">1 person</option>
-                      <option value="2">2 person</option>
-                      <option value="3">3 person</option>
-                      <option value="4">4 person</option>
-                      <option value="5">5 person</option>
-                    </select>
-                  }
-                />
+                <div className={classes.input_group}>
 
-                <div>
-                  <input type="date" />
+                  <IconInput
+                    icon={({ className }) => <AiOutlineUser className={className} />}
+                    input={({ className }) =>
+                      <select defaultValue='1' className={className}>
+                        <option value="1">1 person</option>
+                        <option value="2">2 person</option>
+                        <option value="3">3 person</option>
+                        <option value="4">4 person</option>
+                        <option value="5">5 person</option>
+                      </select>
+                    }
+                  />
+
+                  <div>
+                    <input type="date" />
+                  </div>
+
+
+
                 </div>
 
                 <IconInput
+                  expand
                   icon={({ className }) => <BsClockFill className={className} />}
                   input={({ className }) =>
                     <select defaultValue='' className={className}>
@@ -59,7 +67,7 @@ const ContactUs = () => {
                 />
 
               </div>
-              
+
               <textarea name="" id="" cols="20" rows="4" placeholder='Message'></textarea>
               <Button variant='primary' style={classes.action}>Book A Table</Button>
 

@@ -257,7 +257,7 @@ section {
 }
 @media screen and (min-width: 967px) {
   .testimonials .swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal {
-    top: 60%;
+    top: 20%;
     gap: 8rem;
   }
 }
