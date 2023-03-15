@@ -156,6 +156,7 @@
   flex-direction: auto;
   position: relative;
   padding: 4rem;
+  margin: auto;
 }
 .intro .container .video .play_btn, .intro .container .video::before, .intro .container .video::after {
   position: absolute;

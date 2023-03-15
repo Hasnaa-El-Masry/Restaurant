@@ -1,6 +1,134 @@
 @import '../../../styles/variables';
 @import '../../../styles/mixins';
 @import '../../../styles/reusable';
+@import '../../../styles/mediaqueries';
+
+// .intro {
+//     background: linear-gradient(90deg, hsla(0, 0%, 0%, 0.9) 0, hsla(0, 0%, 0%, .4)), url('../../../assets/images/intro-bg.jpg');
+//     background-size: cover;
+//     background-attachment: fixed;
+
+//     .container {
+//         display: grid;
+//         row-gap: 3rem;
+
+//         .video {
+//             @include flex(center, center);
+//             position: relative;
+//             padding: 4rem;
+//             margin: auto;
+
+//             .play_btn,
+//             &::before,
+//             &::after {
+//                 position: absolute;
+//                 @include flex(center, center);
+//                 border-radius: 50%;
+//                 width: 100px;
+//                 height: 100px;
+
+//             }
+
+//             &::before,
+//             &::after {
+//                 content: "";
+//                 z-index: 1;
+//                 top: 50%;
+//                 left: 50%;
+
+//                 transform: translate(-50%, -50%);
+//                 transform-origin: center;
+//                 z-index: 1;
+
+//                 border: 0px solid rgba($color: #fff, $alpha: .5);
+//                 animation: borderWidth 2s ease-in infinite;
+//             }
+
+//             &::after {
+//                 animation-delay: 1s;
+//             }
+
+//             .play_btn {
+//                 border: 1px solid #fff;
+//                 font-size: 1.4rem;
+//                 z-index: 2;
+
+//             }
+//         }
+
+
+//         .shape {
+//             text-align: center;
+//         }
+
+//         .content {
+//             text-align: center;
+//             width: 60%;
+//             margin: auto;
+//             line-height: 1.4;
+
+//             h3 {
+//                 font-size: $h2-font-size-lg;
+//                 margin-bottom: 2rem;
+//             }
+
+//             span {
+//                 color: $primary-color;
+//                 font-size: $normal-font-size;
+//                 letter-spacing: .2rem;
+//             }
+//         }
+
+//         .fact_counter {
+//             @extend .relative;
+//             margin-top: 5rem;
+
+//             &::before {
+//                 background-image: url('../../../assets/images/intro_pattern.png');
+//                 height: 30%;
+//                 top: -130%;
+//             }
+
+//             &::after {
+//                 display: none;
+//             }
+
+//             .facts {
+//                 display: grid;
+//                 grid-template-columns: 15% 15% 15% 15%;
+//                 justify-content: space-between;
+
+//                 .fact {
+//                     @include flex(space-between, center);
+
+//                     &_count {
+//                         @include flex(space-between, center);
+//                         font-family: $header-font;
+
+//                         span {
+//                             font-size: $h2-font-size-lg;
+//                         }
+
+//                         svg {
+//                             font-size: 2rem;
+//                         }
+
+//                     }
+
+//                     &_text {
+//                         color: $primary-color;
+//                         letter-spacing: .2rem;
+//                         line-height: 1.7;
+//                         font-size: $normal-font-size;
+//                     }
+//                 }
+//             }
+
+//         }
+//     }
+
+// }
+
 
 .intro {
     background: linear-gradient(90deg, hsla(0, 0%, 0%, 0.9) 0, hsla(0, 0%, 0%, .4)), url('../../../assets/images/intro-bg.jpg');
@@ -10,11 +138,12 @@
     .container {
         display: grid;
         row-gap: 3rem;
-        
+
         .video {
             @include flex(center, center);
             position: relative;
             padding: 4rem;
+            margin: auto;
 
             .play_btn,
             &::before,
@@ -61,18 +190,16 @@
 
         .content {
             text-align: center;
-            width: 60%;
-            margin: auto;
             line-height: 1.4;
 
             h3 {
-                font-size: $h2-font-size-lg;
+                font-size: $h2-font-size-sm;
                 margin-bottom: 2rem;
             }
 
             span {
                 color: $primary-color;
-                font-size: $normal-font-size;
+                font-size: $small-font-size;
                 letter-spacing: .2rem;
             }
         }
@@ -83,8 +210,8 @@
 
             &::before {
                 background-image: url('../../../assets/images/intro_pattern.png');
-                height: 30%;
-                top: -130%;
+                height: 1.5rem;
+                top: -15%;
             }
 
             &::after {
@@ -92,23 +219,22 @@
             }
 
             .facts {
-                display: grid;
-                grid-template-columns: 15% 15% 15% 15%;
-                justify-content: space-between;
+
+                @include grid(3rem);
 
                 .fact {
-                    @include flex(space-between, center);
+                    @include flex(center, center, 1.5rem, column);
 
                     &_count {
                         @include flex(space-between, center);
                         font-family: $header-font;
 
                         span {
-                            font-size: $h2-font-size-lg;
+                            font-size: $h2-font-size-sm;
                         }
 
                         svg {
-                            font-size: 2rem;
+                            font-size: $small-font-size;
                         }
 
                     }
@@ -117,12 +243,114 @@
                         color: $primary-color;
                         letter-spacing: .2rem;
                         line-height: 1.7;
-                        font-size: $normal-font-size;
+                        font-size: $small-font-size;
                     }
                 }
             }
 
         }
+    }
+
+}
+
+
+@include mobile {
+
+    .intro {
+
+        .container {
+
+            .content {
+                width: 80%;
+                margin: auto;
+
+                h3 {
+                    font-size: $h2-font-size-md;
+                }
+
+                span {
+                    font-size: $normal-font-size;
+                }
+            }
+
+            .fact_counter {
+            
+                &::before {
+                    height: 10%;
+                    top: -30%;
+                }
+
+                .facts {
+                    grid-template-columns: 1fr 1fr;
+
+                    .fact {
+
+                        &_count {
+
+                            span {
+                                font-size: $h2-font-size-md;
+                            }
+
+                            svg {
+                                font-size: $normal-font-size;
+                            }
+
+                        }
+
+                        &_text {
+                            font-size: $normal-font-size;
+                        }
+                    }
+                }
+
+            }
+        }
+
+    }
+
+}
+
+@include tablet {
+
+    .intro {
+
+        .container {
+
+            .content {
+                width: 60%;
+
+                h3 {
+                    font-size: $h2-font-size-lg;
+                }
+
+            }
+
+            .fact_counter {
+            
+                &::before {
+                    height: 15%;
+                    top: -45%;
+                }
+
+                .facts {
+                    grid-template-columns: 1fr 1fr 1fr 1fr;
+
+                    .fact {
+
+                        &_count {
+
+                            span {
+                                font-size: $h2-font-size-lg;
+                            }
+
+                        }
+
+                    }
+                }
+
+            }
+        }
+
     }
 
 }
