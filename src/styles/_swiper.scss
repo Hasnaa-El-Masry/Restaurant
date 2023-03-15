@@ -1,3 +1,5 @@
+@import 'mediaqueries';
+
 .swiper-button-prev,
 .swiper-button-next {
     border: 2px solid $primary-color;
@@ -18,14 +20,15 @@
 
     .swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal {
         bottom: 0;
-        top: 70%;
+        top: 50%;
         display: flex;
-        gap: 8rem;
+        gap: 5rem;
         justify-content: center;
         align-items: center;
     
         .swiper-pagination-bullet {
             background: none;
+
             img{
                 width: 80px;
                 border-radius: 50%;
@@ -50,6 +53,7 @@
                 transform: translate(-50%,-100%);
                 width: 80px;
                 color: $primary-color;
+                letter-spacing: .2rem;
             }
     
         }
@@ -59,3 +63,29 @@
 }
 
 
+@include mobile {
+
+    .testimonials {
+
+        .swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal {
+            top:30%;
+            gap: 7rem;
+        }
+        
+    }
+
+}
+
+
+@include tablet {
+
+    .testimonials {
+
+        .swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal {
+            top:60%;
+            gap: 8rem;
+        }
+        
+    }
+
+}

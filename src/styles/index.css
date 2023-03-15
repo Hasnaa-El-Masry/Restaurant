@@ -196,6 +196,10 @@ section {
   z-index: 3;
 }
 
+/* ======= MEDIA QURIES ======== */
+/* for small devices */
+/* for medium devices */
+/* for large devices */
 .swiper-button-prev,
 .swiper-button-next {
   border: 2px solid hsl(38, 61%, 73%);
@@ -213,9 +217,9 @@ section {
 
 .testimonials .swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal {
   bottom: 0;
-  top: 70%;
+  top: 50%;
   display: flex;
-  gap: 8rem;
+  gap: 5rem;
   justify-content: center;
   align-items: center;
 }
@@ -242,8 +246,21 @@ section {
   transform: translate(-50%, -100%);
   width: 80px;
   color: hsl(38, 61%, 73%);
+  letter-spacing: 0.2rem;
 }
 
+@media screen and (min-width: 768px) {
+  .testimonials .swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal {
+    top: 30%;
+    gap: 7rem;
+  }
+}
+@media screen and (min-width: 967px) {
+  .testimonials .swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal {
+    top: 60%;
+    gap: 8rem;
+  }
+}
 * {
   box-sizing: border-box;
   margin: 0;
@@ -262,6 +279,7 @@ body {
   background-color: hsl(210, 4%, 9%);
   font-family: "Roboto";
   color: #fff;
+  overflow-x: hidden;
 }
 
 h1,

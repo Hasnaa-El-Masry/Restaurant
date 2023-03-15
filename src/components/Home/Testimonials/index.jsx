@@ -27,26 +27,34 @@ const Testimonials = () => {
           >
             <SwiperSlide className={classes.quote_container}>
               <RiDoubleQuotesR className={classes.quote_mark} />
-              <q>I wanted to thank you for inviting me down for that amazing dinner 
+              <q>I wanted to thank you for inviting me down for that amazing dinner
                 the other night. The food was extraordinary.</q>
-              <AnimatedSquares />
+
+              <div>
+                <AnimatedSquares />
+              </div>
 
             </SwiperSlide>
 
             <SwiperSlide className={classes.quote_container}>
               <RiDoubleQuotesR className={classes.quote_mark} />
-              <q>I wanted to thank you for inviting me down 
+              <q>I wanted to thank you for inviting me down
                 for that amazing dinner the other night. The food was extraordinary.</q>
 
-              <AnimatedSquares />
+              <div>
+                <AnimatedSquares />
+              </div>
 
             </SwiperSlide>
 
             <SwiperSlide className={classes.quote_container}>
               <RiDoubleQuotesR className={classes.quote_mark} />
-              <q>I wanted to thank you for inviting me down for 
+              <q>I wanted to thank you for inviting me down for
                 that amazing dinner the other night. The food was extraordinary.</q>
-              <AnimatedSquares />
+
+              <div>
+                <AnimatedSquares />
+              </div>
 
             </SwiperSlide>
 

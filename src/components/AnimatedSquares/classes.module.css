@@ -8,7 +8,12 @@
 /* =====  Margins  ===== */
 /* =====  Z index  ===== */
 /* ===== Transition  ===== */
+.squares {
+  overflow: hidden;
+  display: block;
+}
 .squares svg {
+  position: relative;
   color: hsl(38, 61%, 73%);
   animation: rotate 3s ease-in infinite alternate;
   font-size: 0.8rem;

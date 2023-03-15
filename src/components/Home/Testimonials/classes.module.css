@@ -8,28 +8,30 @@
 /* =====  Margins  ===== */
 /* =====  Z index  ===== */
 /* ===== Transition  ===== */
+/* ======= MEDIA QURIES ======== */
+/* for small devices */
+/* for medium devices */
+/* for large devices */
 .testimonials {
   padding-left: 0;
   padding-right: 0;
-  padding-bottom: 0;
+  padding-bottom: 2rem;
 }
 .testimonials .container {
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../../../assets/images/testimonials-bg.jpg");
   background-size: cover;
-  min-height: 140vh;
 }
 .testimonials .container .slide {
   padding: 5rem 0;
-  min-height: 100vh;
-  width: 75%;
+  min-height: 70vh;
 }
 .testimonials .container .slide .quote_container {
   display: grid;
-  row-gap: 2rem;
   text-align: center;
 }
 .testimonials .container .slide .quote_container q {
-  font-size: 3rem;
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
   display: block;
   font-family: "Forum", cursive;
   line-height: 1.6;
@@ -37,4 +39,31 @@
 .testimonials .container .slide .quote_container .quote_mark {
   font-size: 2rem;
   margin: auto;
+}
+
+@media screen and (min-width: 768px) {
+  .slide {
+    min-height: 50vh !important;
+  }
+  .slide .quote_container q {
+    font-size: 2rem !important;
+  }
+}
+@media screen and (min-width: 967px) {
+  .slide {
+    min-height: 80vh !important;
+  }
+  .slide .quote_container q {
+    width: 70%;
+    margin: auto;
+    font-size: 2rem !important;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .slide {
+    min-height: 100vh !important;
+  }
+  .slide .quote_container q {
+    font-size: 3rem !important;
+  }
 }

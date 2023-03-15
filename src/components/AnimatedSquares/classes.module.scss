@@ -1,7 +1,11 @@
 @import '../..//styles/variables';
 
 .squares {
+    overflow: hidden;
+    display: block;
+    
     svg {
+        position: relative;
         color: $primary-color;
         animation: rotate 3s ease-in infinite alternate;
         font-size: .8rem;
