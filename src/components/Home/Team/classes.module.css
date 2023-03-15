@@ -8,13 +8,18 @@
 /* =====  Margins  ===== */
 /* =====  Z index  ===== */
 /* ===== Transition  ===== */
+/* ======= MEDIA QURIES ======== */
+/* for small devices */
+/* for medium devices */
+/* for large devices */
 .team {
   background-color: hsl(210, 4%, 9%) !important;
   padding-top: 3rem;
 }
 .team .content {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  justify-self: center;
+  justify-content: center;
   gap: 3.5rem;
 }
 .team .content .item {
@@ -85,4 +90,16 @@
 .team .content .item .image:hover .overlay {
   transform: scale(1, 1);
   transform-origin: left center;
+}
+
+@media screen and (min-width: 768px) {
+  .content {
+    grid-template-columns: 1fr 1fr;
+    grid-template-columns: auto auto;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .content {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }

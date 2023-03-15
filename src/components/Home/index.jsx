@@ -30,8 +30,8 @@ const Home = () => {
         <Testimonials />
         <ContactUs/>
         <WhyUs/>
-        {/*<Team/>
-        <Intro/>
+        <Team/>
+        {/*<Intro/>
         <News/> */}
       </main>
     </>
