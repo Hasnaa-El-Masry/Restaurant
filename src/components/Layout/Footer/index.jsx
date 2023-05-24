@@ -21,22 +21,22 @@ const Footer = () => {
                   </Link>
                 </p>
                 <p>
-                  <Link to="/" className="link">
-                    menus
+                  <Link to="/menu" className="link">
+                    menu
                   </Link>
                 </p>
                 <p>
-                  <Link to="/" className="link">
+                  <Link to="/about" className="link">
                     about us
                   </Link>
                 </p>
                 <p>
-                  <Link to="/" className="link">
+                  <Link to="/chefs" className="link">
                     our chefs
                   </Link>
                 </p>
                 <p>
-                  <Link to="/" className="link">
+                  <Link to="/contact" className="link">
                     contact
                   </Link>
                 </p>
@@ -45,7 +45,7 @@ const Footer = () => {
           </div>
           <div className={classes.address_info}>
             <div className={classes.logo}>
-              <Link>
+              <Link to="/">
                 <img src={logo} alt="logo" />
               </Link>
             </div>

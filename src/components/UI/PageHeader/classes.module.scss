@@ -1,0 +1,23 @@
+@import "../../../styles/mixins";
+
+.header {
+  height: 80vh;
+  position: relative;
+
+  .content,
+  .overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+  .content {
+    z-index: 2;
+    @include flex(center, flex-end);
+  }
+
+  img {
+    opacity: 0.5;
+    height: 100%;
+  }
+}

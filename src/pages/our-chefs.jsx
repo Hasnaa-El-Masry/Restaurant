@@ -1,15 +1,20 @@
 import Contianer from "../components/UI/Container";
+import bgSrc from "../assets/images/chefs-header.jpg";
+import PageHeader from "../components/UI/PageHeader";
 
 const OurChefs = () => {
   return (
-    <Contianer>
-      <header>page header</header>
-      <main>
-        <section>Experience</section>
-        <section>Qoute</section>
-        <section>Team</section>
-      </main>
-    </Contianer>
+    <>
+      <PageHeader title="Meet Our Chefs" subtitle="Our Team" src={bgSrc} />
+
+      <Contianer>
+        <main>
+          <section>Experience</section>
+          <section>Qoute</section>
+          <section>Team</section>
+        </main>
+      </Contianer>
+    </>
   );
 };
 
