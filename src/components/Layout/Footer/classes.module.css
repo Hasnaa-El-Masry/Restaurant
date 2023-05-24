@@ -139,10 +139,14 @@
   z-index: 3;
 }
 
+/* ======= MEDIA QURIES ======== */
+/* for small devices */
+/* for medium devices */
+/* for large devices */
 .footer {
   background: linear-gradient(90deg, hsla(0, 0%, 0%, 0.9) 0, hsla(0, 0%, 0%, 0.4)), url("../../../assets/images/footer-bg.jpg");
+  background-position: right;
   background-size: cover;
-  min-height: 100vh;
   text-align: center;
   padding: 5rem 0;
 }
@@ -157,11 +161,17 @@
   display: grid;
   align-items: center;
   justify-content: space-between;
-  gap: auto;
-  grid-template-columns: 1fr 2fr 1fr;
+  gap: 3rem;
+  grid-template-columns: 1fr;
 }
-.footer .content ul {
-  margin-bottom: 7rem;
+.footer .content .pages {
+  order: 2;
+}
+.footer .content .social {
+  order: 3;
+}
+.footer .content .address_info {
+  order: 1;
 }
 .footer .content ul li {
   display: flex;
@@ -185,10 +195,10 @@
   gap: 1rem;
   grid-template-columns: 1fr;
   background-color: hsl(30, 8%, 5%);
-  padding: 7rem 5rem;
+  padding: 4rem 2rem;
 }
 .footer .content .address_info .logo {
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 .footer .content .address_info .logo img {
   width: 30%;
@@ -199,7 +209,7 @@
 }
 .footer .content .address_info p {
   margin: 0.4rem;
-  font-size: 1rem;
+  font-size: 0.813rem;
 }
 .footer .content .address_info .action {
   display: flex;
@@ -216,10 +226,43 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: auto;
-  flex-direction: auto;
-  font-size: 1rem;
+  gap: 1rem;
+  flex-direction: column;
+  font-size: 0.813rem;
 }
 .footer .copy p span a {
   color: hsl(38, 61%, 73%);
+}
+
+@media screen and (min-width: 967px) {
+  .footer .content {
+    display: grid;
+    align-items: center;
+    justify-content: space-between;
+    gap: auto;
+    grid-template-columns: 1fr 2fr 1fr;
+  }
+  .footer .content .pages, .footer .content .social, .footer .content .address_info {
+    order: initial;
+  }
+  .footer .content ul {
+    margin-bottom: 7rem;
+  }
+  .footer .content .address_info {
+    padding: 7rem 5rem;
+  }
+  .footer .content .address_info .logo {
+    margin-bottom: 2rem;
+  }
+  .footer .content .address_info p {
+    font-size: 1rem;
+  }
+  .footer .copy p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: auto;
+    flex-direction: auto;
+    font-size: 1rem;
+  }
 }

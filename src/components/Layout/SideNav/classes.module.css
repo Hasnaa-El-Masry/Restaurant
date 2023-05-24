@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css2?family=Forum&family=Gloock&family=Lora&family=Raleway&family=Space+Mono&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap");
+/* ===== Colors   ===== */
+/* ===== Font and Typography  ===== */
+/* ===== Container width  ===== */
+/* ===== Section  ===== */
+/* =====  Font Weight  ===== */
+/* =====  Margins  ===== */
+/* =====  Z index  ===== */
+/* ===== Transition  ===== */
+.side_nav {
+  background-color: hsl(30, 8%, 5%);
+  min-height: 100vh;
+  overflow: auto;
+  width: 25vw;
+  position: fixed;
+  left: -100%;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  transition: all 0.7s ease-in-out;
+  z-index: 100;
+  padding: 3rem;
+}
+.side_nav .logo {
+  padding: 2rem;
+}
+.side_nav .menu {
+  border-top: 1px solid rgba(170, 170, 170, 0.4392156863);
+}
+.side_nav .menu .menu__item {
+  padding-top: 1rem;
+  padding-bottom: 1.2rem;
+  text-transform: uppercase;
+  font-size: 0.813rem;
+  border-bottom: 1px solid rgba(170, 170, 170, 0.4392156863);
+}
+.side_nav .menu .menu__item__link {
+  display: flex;
+  align-items: center;
+  justify-content: auto;
+  gap: 0.5rem;
+  flex-direction: auto;
+}
+.side_nav .menu .menu__item__link span {
+  background: hsl(30, 8%, 5%);
+  position: relative;
+  left: -1.3rem;
+  transition: all 0.4s ease-in-out;
+}
+.side_nav .menu .menu__item__icon {
+  width: 0.8rem;
+  opacity: 0;
+  transition: all 0.4s ease-in-out;
+}
+.side_nav .menu .menu__item__link:hover .menu__item__icon {
+  opacity: 1;
+}
+.side_nav .menu .menu__item__link:hover span {
+  left: 0;
+}
+.side_nav .info {
+  padding: 2.5rem 1rem;
+  text-align: center;
+}
+.side_nav .info h2 {
+  margin-bottom: 1rem;
+}
+.side_nav .info .info_content p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+.side_nav .info .divider {
+  color: hsl(38, 61%, 73%);
+}
+.side_nav .info .booking {
+  padding-top: 1rem;
+}
+.side_nav .info .booking h5 {
+  margin-bottom: 2rem;
+}
+.side_nav .info .booking a {
+  font-size: 1.5rem;
+}
+
+.show {
+  left: 0;
+}
+
+.hide {
+  left: -100%;
+}

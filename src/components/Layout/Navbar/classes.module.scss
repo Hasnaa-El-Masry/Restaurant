@@ -56,6 +56,9 @@
         &_container {
             @include flex(space-between, center);
             flex-direction: row-reverse;
+            .toggle_icon {
+                cursor: pointer;
+            }
         }
     }
 

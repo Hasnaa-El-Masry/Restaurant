@@ -1,15 +1,25 @@
-import React from 'react'
-import Footer from './Footer'
-import Navbar from './Navbar'
+import React, { useContext, useEffect } from "react";
+import Footer from "./Footer";
+import Navbar from "./Navbar";
+import SideNav from "./SideNav";
+import Overlay from "../UI/Overlay";
+import { SideNavContext } from "../../context/showSideContext";
 
-const Layout = ({children}) => {
-    return (
-        <>
-            <Navbar />
-            {children}
-            <Footer />
-        </>
-    )
-}
+const Layout = ({ children }) => {
+  const { show, setShow, toggleHandler } = useContext(SideNavContext);
+  console.log(show);
 
-export default Layout
+  return (
+    <>
+      <Navbar toggleHandler={toggleHandler} />
+      <aside>
+        <SideNav show={show} />
+      </aside>
+      {show && <Overlay onClick={() => setShow(false)} />}
+      <main>{children}</main>
+      <Footer />
+    </>
+  );
+};
+
+export default Layout;

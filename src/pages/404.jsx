@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const MotFound = () => {
-  return (
-    <div>MotFound</div>
-  )
-}
+  return <div>MotFound</div>;
+};
 
-export default MotFound
+export default MotFound;

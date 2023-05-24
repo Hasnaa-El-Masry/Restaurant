@@ -155,12 +155,16 @@
     width: 100%;
   }
 }
+/* ======= MEDIA QURIES ======== */
+/* for small devices */
+/* for medium devices */
+/* for large devices */
 .news .news {
   display: grid;
   align-items: auto;
   justify-content: space-between;
   gap: 2.5rem;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr;
 }
 .news .news .new {
   background-color: #fff;
@@ -214,4 +218,15 @@
 .news .action {
   margin-top: 4rem;
   text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .news .news {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (min-width: 967px) {
+  .news .news {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }

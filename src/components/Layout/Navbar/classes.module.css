@@ -77,6 +77,9 @@
   flex-direction: auto;
   flex-direction: row-reverse;
 }
+.nav__bottom_container .toggle_icon {
+  cursor: pointer;
+}
 .nav .icon {
   font-size: 1.1rem;
 }

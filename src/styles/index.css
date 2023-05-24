@@ -405,3 +405,18 @@ img {
     font-size: 1.3rem;
   }
 }
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: hsl(38, 61%, 73%);
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(38, 83%, 72%);
+}

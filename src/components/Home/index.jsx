@@ -1,19 +1,18 @@
-import React from 'react'
-import classes from './classes.module.scss'
+import React from "react";
+import classes from "./classes.module.scss";
 
-import ContactUs from './ContactUs'
-import Header from '../Header'
-import Intro from './Intro'
-import Menu from './Menu'
-import News from './News'
-import Offers from './Offers'
-import SpecialDish from './SpecialDish'
-import SpecialOffer from './SpecialOffer'
-import Story from './Story'
-import Team from './Team'
-import Testimonials from './Testimonials'
-import WhyUs from './WhyUs'
-
+import ContactUs from "./ContactUs";
+import Header from "../Header";
+import Intro from "./Intro";
+import Menu from "./Menu";
+import News from "./News";
+import Offers from "./Offers";
+import SpecialDish from "./SpecialDish";
+import SpecialOffer from "./SpecialOffer";
+import Story from "./Story";
+import Team from "./Team";
+import Testimonials from "./Testimonials";
+import WhyUs from "./WhyUs";
 
 const Home = () => {
   return (
@@ -21,7 +20,7 @@ const Home = () => {
       <header>
         <Header />
       </header>
-      <main className='main'>
+      <main className="main">
         <Offers />
         <Story />
         <SpecialDish />
@@ -35,7 +34,7 @@ const Home = () => {
         <News />
       </main>
     </>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;

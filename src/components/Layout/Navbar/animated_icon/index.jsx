@@ -1,13 +1,13 @@
-import classes from './classes.module.scss';
+import classes from "./classes.module.scss";
 
-const BurgerIcon = () => {
+const BurgerIcon = ({ onClick }) => {
   return (
-    <div className={classes.toggle}>
-        <div></div>
-        <div></div>
-        <div></div>
+    <div className={classes.toggle} onClick={onClick || null}>
+      <div></div>
+      <div></div>
+      <div></div>
     </div>
-  )
-}
+  );
+};
 
-export default BurgerIcon
+export default BurgerIcon;

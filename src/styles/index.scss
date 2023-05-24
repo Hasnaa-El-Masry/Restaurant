@@ -1,18 +1,17 @@
-@import 'main';
-
+@import "main";
 
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    text-decoration: none;
-    list-style: none;
-    border: 0;
-    outline: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  border: 0;
+  outline: 0;
 }
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 // ::-webkit-scrollbar {
@@ -20,10 +19,10 @@ html {
 // }
 
 body {
-    background-color: $body-bg;
-    font-family: $body-font;
-    color: $text-color;
-    overflow-x:hidden;
+  background-color: $body-bg;
+  font-family: $body-font;
+  color: $text-color;
+  overflow-x: hidden;
 }
 
 h1,
@@ -31,136 +30,145 @@ h2,
 h3,
 h4,
 h5 {
-    font-family: $header-font !important;
-    font-weight: $font-light;
-    transition: all .4s ease-in-out;
+  font-family: $header-font !important;
+  font-weight: $font-light;
+  transition: all 0.4s ease-in-out;
 }
 
 h1 {
-    font-size: $h1-font-size-sm;
+  font-size: $h1-font-size-sm;
 }
 
 h2 {
-    font-size: $h2-font-size-sm;
+  font-size: $h2-font-size-sm;
 }
 
 h3 {
-    font-size: $h3-font-size-sm;
+  font-size: $h3-font-size-sm;
 }
 
 h4 {
-    font-size: $h4-font-size-sm;
+  font-size: $h4-font-size-sm;
 }
 
 h5 {
-    font-size: $h5-font-size-sm;
+  font-size: $h5-font-size-sm;
 }
 
 small {
-    font-size: .6rem;
-    color: $muted-text-color;
+  font-size: 0.6rem;
+  color: $muted-text-color;
 }
 
 p {
-    color: $text-color-light;
-    font-size: $small-font-size;
-    line-height: 1.8;
-    transition: $transition-fast;
+  color: $text-color-light;
+  font-size: $small-font-size;
+  line-height: 1.8;
+  transition: $transition-fast;
 }
 
 a {
-    color: $text-color;
-    $normal-font-size: .938rem;
-    display: block;
+  color: $text-color;
+  $normal-font-size: 0.938rem;
+  display: block;
 
-    &:hover {
-        color: $primary-color;
-    }
+  &:hover {
+    color: $primary-color;
+  }
 }
 
 .main {
-    &>section:nth-child(odd) {
-        background-color: $container-bg;
-    }
+  & > section:nth-child(odd) {
+    background-color: $container-bg;
+  }
 }
 
 input,
 textarea,
 select {
+  width: 100%;
+  padding: 1.3rem;
+  color: $text-color;
+  background-color: $body-bg;
+  border: 1px solid $divide-color;
+  font-size: 1rem;
 
-    width: 100%;
-    padding: 1.3rem;
+  &::placeholder {
     color: $text-color;
-    background-color: $body-bg;
-    border: 1px solid $divide-color;
-    font-size: 1rem;
+  }
 
-    &::placeholder {
-        color: $text-color
-    }
-
-    &:focus {
-        border-color: $primary-color
-    }
+  &:focus {
+    border-color: $primary-color;
+  }
 }
 
 img {
-    display: block;
-    width: 100%;
-    object-fit: cover;
+  display: block;
+  width: 100%;
+  object-fit: cover;
 }
 
 // Swiper style modefiying
 .swiper-pagination-bullet-active {
-    background-color: $primary-color;
+  background-color: $primary-color;
 }
 
-
-
 @include smallDevice {
+  h1 {
+    font-size: $h1-font-size-md;
+  }
 
-    h1 {
-        font-size: $h1-font-size-md;
-    }
+  h2 {
+    font-size: $h2-font-size-md;
+  }
 
-    h2 {
-        font-size: $h2-font-size-md;
-    }
+  h3 {
+    font-size: $h3-font-size-md;
+  }
 
-    h3 {
-        font-size: $h3-font-size-md;
-    }
+  h4 {
+    font-size: $h4-font-size-md;
+  }
 
-    h4 {
-        font-size: $h4-font-size-md;
-    }
-
-    h5 {
-        font-size: $h5-font-size-md;
-    }
-
+  h5 {
+    font-size: $h5-font-size-md;
+  }
 }
 
 @include tablet {
+  h1 {
+    font-size: $h1-font-size-lg;
+  }
 
-    h1 {
-        font-size: $h1-font-size-lg;
-    }
+  h2 {
+    font-size: $h2-font-size-lg;
+  }
 
-    h2 {
-        font-size: $h2-font-size-lg;
-    }
+  h3 {
+    font-size: $h3-font-size-lg;
+  }
 
-    h3 {
-        font-size: $h3-font-size-lg;
-    }
+  h4 {
+    font-size: $h4-font-size-lg;
+  }
 
-    h4 {
-        font-size: $h4-font-size-lg;
-    }
+  h5 {
+    font-size: $h5-font-size-lg;
+  }
+}
 
-    h5 {
-        font-size: $h5-font-size-lg;
-    }
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: $primary-color;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: $scroll-bar-color;
 }

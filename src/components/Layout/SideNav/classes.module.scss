@@ -1,0 +1,97 @@
+@import "../../../styles/variables";
+@import "../../../styles/mixins";
+
+.side_nav {
+  background-color: $container-bg;
+  min-height: 100vh;
+  overflow: auto;
+  width: 25vw;
+  position: fixed;
+  left: -100%;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  transition: $transition-slow;
+  z-index: $z-fixed;
+  padding: 3rem;
+
+  .logo {
+    padding: 2rem;
+  }
+
+  .menu {
+    border-top: 1px solid $divide-color;
+    .menu__item {
+      padding-top: 1rem;
+      padding-bottom: 1.2rem;
+      text-transform: uppercase;
+      font-size: $small-font-size;
+      border-bottom: 1px solid $divide-color;
+
+      &__link {
+        @include flex(auto, center, 0.5rem);
+        span {
+          background: $container-bg;
+          position: relative;
+          left: -(calc(0.5rem + 0.8rem));
+          transition: $transition-fast;
+        }
+      }
+
+      &__icon {
+        width: 0.8rem;
+        opacity: 0;
+        transition: $transition-fast;
+      }
+
+      &__link:hover {
+        .menu__item__icon {
+          opacity: 1;
+        }
+        span {
+          left: 0;
+        }
+      }
+    }
+  }
+
+  .info {
+    padding: 2.5rem 1rem;
+    text-align: center;
+
+    h2 {
+      margin-bottom: 1rem;
+    }
+
+    .info_content {
+      p {
+        font-size: $h5-font-size-md;
+        margin-bottom: 1rem;
+      }
+    }
+
+    .divider {
+      color: $primary-color;
+    }
+
+    .booking {
+      padding-top: 1rem;
+
+      h5 {
+        margin-bottom: 2rem;
+      }
+
+      a {
+        font-size: $h4-font-size-lg;
+      }
+    }
+  }
+}
+
+.show {
+  left: 0;
+}
+
+.hide {
+  left: -100%;
+}
