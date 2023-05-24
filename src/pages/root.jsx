@@ -1,11 +1,11 @@
 import React from "react";
-import Home from "../components/Home";
 import Layout from "../components/Layout";
+import { Outlet } from "react-router-dom";
 
 const Root = () => {
   return (
     <Layout>
-      <Home />
+      <Outlet />
     </Layout>
   );
 };
